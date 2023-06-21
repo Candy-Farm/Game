@@ -5,19 +5,29 @@ using Candies;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    float moveSpeed;
-    float xAxis;
     void Start()
     {
-
+        Bounds();
     }
 
     void Update()
     {
-        xAxis = Input.GetAxis("Horizontal");
-        print(xAxis);
-        Vector3 playerPos = transform.position;
-        transform.position += Vector3.right * xAxis * Time.deltaTime * moveSpeed;
+        if (Camera.main.ScreenToViewportPoint(Input.mousePosition) != null)
+        {
+            Vector3 mouseInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            float xPos = Mathf.Clamp(mouseInput.x, Bounds().x, Bounds().y);
+            transform.position = new Vector3(xPos, transform.position.y, 0);
+        }
+    }
+
+    Vector3 Bounds()
+    {
+
+        Camera cam = Camera.main;
+        // float height =cam.orthographicSize;
+        float width = cam.orthographicSize * cam.aspect;
+        float objWidth = gameObject.GetComponent<SpriteRenderer>().bounds.size.x / 2;
+        print((objWidth));
+        return new Vector3(-width + objWidth, width - objWidth, 0);
     }
 }
