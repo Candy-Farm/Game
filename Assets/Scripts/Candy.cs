@@ -15,4 +15,9 @@ public class Candy : MonoBehaviour
     {
 
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        print("yes then");
+    }
 }

@@ -12,12 +12,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Camera.main.ScreenToViewportPoint(Input.mousePosition) != null)
-        {
-            Vector3 mouseInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            float xPos = Mathf.Clamp(mouseInput.x, Bounds().x, Bounds().y);
-            transform.position = new Vector3(xPos, transform.position.y, 0);
-        }
+        if (Input.touchCount == 1)
+            if (Camera.main.ScreenToViewportPoint(Input.mousePosition) != null)
+            {
+                Vector3 mouseInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                float xPos = Mathf.Clamp(mouseInput.x, Bounds().x, Bounds().y);
+                transform.position = new Vector3(xPos, transform.position.y, 0);
+            }
     }
 
     Vector3 Bounds()
