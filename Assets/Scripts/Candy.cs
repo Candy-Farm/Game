@@ -15,9 +15,20 @@ public class Candy : MonoBehaviour
     {
 
     }
-
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        print("yes then");
+
+        if (other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject, 0.02f);
+        }
+
+        if (other.gameObject.tag == "Boundry")
+        {
+            print("missed");
+            Destroy(gameObject, 0.02f);
+        }
     }
+
+
 }

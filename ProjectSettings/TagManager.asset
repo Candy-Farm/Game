@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Candy
+  - Boundry
+  - Bomb
+  - NFT
   layers:
   - Default
   - TransparentFX
@@ -43,10 +47,4 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2017924269
-    locked: 0
-  - name: Player
-    uniqueID: 387821301
-    locked: 0
-  - name: Candy
-    uniqueID: 2313798649
     locked: 0
