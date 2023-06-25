@@ -25,10 +25,12 @@ public class Candy : MonoBehaviour
 
         if (other.gameObject.tag == "Boundry")
         {
-            print("missed");
+            PlayerController.instance.LooseLife();
             Destroy(gameObject, 0.02f);
         }
     }
+
+
 
 
 }

@@ -5,6 +5,13 @@ using Candies;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+    int lifeLine = 4;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         Bounds();
@@ -21,14 +28,24 @@ public class PlayerController : MonoBehaviour
             }
     }
 
+    public void LooseLife()
+    {
+        lifeLine--;
+        UiHandler.instance.updateLifeUi();
+        if (lifeLine <= 0)
+        {
+            print(lifeLine);
+            GameManager.instance.OnGameOver();
+            return;
+        }
+    }
+
     Vector3 Bounds()
     {
 
         Camera cam = Camera.main;
-        // float height =cam.orthographicSize;
         float width = cam.orthographicSize * cam.aspect;
         float objWidth = gameObject.GetComponent<SpriteRenderer>().bounds.size.x / 2;
-        print((objWidth));
         return new Vector3(-width + objWidth, width - objWidth, 0);
     }
 }
