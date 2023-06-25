@@ -20,18 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        // if (candyDropDuration == 5)
-        // {
-        //     candyDropDuration = 0;
-        // }
-        // else
-        // {
-        //     if (spawnInterval > 0.5)
-        //     {
-        //         spawnInterval -= 0.2f;
-        //     }
-        //     candyDropDuration += Time.deltaTime;
-        // }
+
     }
 
     IEnumerator spawnCandies()
@@ -40,18 +29,18 @@ public class GameManager : MonoBehaviour
         while (!stopSpawning)
         {
             DropCandy();
-            if (candyDropDuration == 5)
-            {
-                candyDropDuration = 0;
-            }
-            else
-            {
-                if (spawnInterval > 0.5)
-                {
-                    spawnInterval -= 0.2f;
-                }
-                candyDropDuration += Time.deltaTime;
-            }
+            // if (candyDropDuration == 500)
+            // {
+            //     candyDropDuration = 0;
+            // }
+            // else
+            // {
+            //     if (spawnInterval > 0.5)
+            //     {
+            //         spawnInterval -= 0.2f;
+            //     }
+            //     candyDropDuration += Time.deltaTime;
+            // }
             yield return new WaitForSeconds(spawnInterval);
         }
     }

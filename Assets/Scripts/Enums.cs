@@ -4,7 +4,10 @@ namespace Candies
 {
     public enum CandyType
     {
-        Candy,
+        firstCandy,
+        secondCandy,
+        thirdCandy,
+        forthCandy,
         Bomb,
         Nft
     }
