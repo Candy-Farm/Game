@@ -6,16 +6,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [SerializeField]
+    CandySO[] candySoCollection;
+
+    public List<Candy> candyCollection;
+
     private void Awake()
     {
+        candyCollection = new List<Candy>();
         instance = this;
     }
     void Start()
-    {
-
-    }
-
-    private void Update()
     {
 
     }
@@ -24,5 +25,10 @@ public class GameManager : MonoBehaviour
     {
         CandySpawnController.instance.stopSpawningCandies();
         UiHandler.instance.ActivateGameOverPanel();
+    }
+
+    void CreateCandy()
+    {
+        Candy candy = new Candy();
     }
 }
