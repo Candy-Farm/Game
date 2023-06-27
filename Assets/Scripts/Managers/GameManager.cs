@@ -23,5 +23,6 @@ public class GameManager : MonoBehaviour
     public void OnGameOver()
     {
         CandySpawnController.instance.stopSpawningCandies();
+        UiHandler.instance.ActivateGameOverPanel();
     }
 }

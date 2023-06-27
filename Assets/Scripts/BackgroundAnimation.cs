@@ -9,10 +9,13 @@ public class BackgroundAnimation : MonoBehaviour
 
     Vector2 offset;
 
+    public bool isMoving;
+
     public float xVelocity, yVelocity;
     private void Awake()
     {
         material = movingBg.GetComponent<Renderer>().material;
+        isMoving = true;
     }
 
     private void Start()
@@ -21,6 +24,7 @@ public class BackgroundAnimation : MonoBehaviour
     }
     private void Update()
     {
-        material.mainTextureOffset += offset * Time.deltaTime;
+        if (isMoving)
+            material.mainTextureOffset += offset * Time.deltaTime;
     }
 }

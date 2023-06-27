@@ -6,6 +6,9 @@ using Candies;
 public class Candy : MonoBehaviour
 {
     public CandyType candyType;
+
+    bool isNFT;
+
     void Start()
     {
 

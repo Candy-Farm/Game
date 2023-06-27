@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     int lifeLine = 4;
 
+    [HideInInspector]
+    public bool winGame;
+
     private void Awake()
     {
         instance = this;
@@ -34,7 +37,7 @@ public class PlayerController : MonoBehaviour
         UiHandler.instance.updateLifeUi();
         if (lifeLine <= 0)
         {
-            print(lifeLine);
+            winGame = false;
             GameManager.instance.OnGameOver();
             return;
         }
@@ -47,5 +50,10 @@ public class PlayerController : MonoBehaviour
         float width = cam.orthographicSize * cam.aspect;
         float objWidth = gameObject.GetComponent<SpriteRenderer>().bounds.size.x / 2;
         return new Vector3(-width + objWidth, width - objWidth, 0);
+    }
+
+    void updateTarget()
+    {
+
     }
 }
