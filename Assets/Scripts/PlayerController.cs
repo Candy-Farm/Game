@@ -51,9 +51,6 @@ public class PlayerController : MonoBehaviour
         float objWidth = gameObject.GetComponent<SpriteRenderer>().bounds.size.x / 2;
         return new Vector3(-width + objWidth, width - objWidth, 0);
     }
+        // if(GameManager.instance.currentTarget.cadnyType==)
 
-    void updateTarget()
-    {
-
-    }
 }

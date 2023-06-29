@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class CandySpawnController : MonoBehaviour
 {
-    public GameObject candyPrefab;
-
+    [SerializeField]
+    GameObject candyPrefab;
     public float spawnInterval;
 
     float candyDropDuration = 5;
+
+    [HideInInspector]
     public bool isSpawning;
+
+    bool canDropBomb;
+    bool canDropNft;
 
     public static CandySpawnController instance;
 
@@ -39,12 +44,22 @@ public class CandySpawnController : MonoBehaviour
         Vector3 position = transform.position;
         float width = cam.orthographicSize * cam.aspect;
         float randWidth = Random.Range(-width + 0.5f, width - 0.5f);
-        GameObject gameObject = Instantiate(candyPrefab, new Vector3(randWidth, position.y, position.z), Quaternion.identity);
+        CreateCandy(new Vector3(randWidth, position.y, position.z));
     }
 
     public void stopSpawningCandies()
     {
         isSpawning = false;
         StopCoroutine(spawnCandies());
+    }
+
+    void CreateCandy(Vector3 position)
+    {
+        CandySO[] candySoCollection = GameManager.instance.candySoCollection;
+        int randIndex = Random.Range(0, candySoCollection.Length);
+        CandySO candySO = candySoCollection[randIndex];
+        Candy candy = Instantiate(candyPrefab, position, Quaternion.identity).GetComponent<Candy>();
+        candy.updateCandyUiData(candySO.candyImage, candySO.candyType, (candySO.candyType == Candies.CandyType.Nft));
+
     }
 }

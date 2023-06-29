@@ -6,10 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "", menuName = "CandyFarm/Candy")]
 public class CandySO : ScriptableObject
 {
-    [SerializeField]
-    CandyType candyType;
+    public CandyType candyType;
 
-    [SerializeField]
-    Sprite candyImage;
-    
+    public Sprite candyImage;
+
 }

@@ -1,39 +1,59 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Candies;
 
 public class Candy : MonoBehaviour
 {
-    public CandyType candyType;
+    CandyType candyType;
+    SpriteRenderer candyImage;
 
     bool isNFT;
 
-    void Start()
+    private void Awake()
     {
-
+        candyImage = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    public void updateCandyUiData(Sprite candyImage, CandyType candyType, bool isNFT = false)
     {
-
+        this.candyImage.sprite = candyImage;
+        this.candyType = candyType;
+        this.isNFT = isNFT;
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
 
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject, 0.02f);
+            OnCandyCatch();
         }
 
         if (other.gameObject.tag == "Boundry")
         {
-            PlayerController.instance.LooseLife();
-            Destroy(gameObject, 0.02f);
+            OnCandyMissed();
         }
     }
 
+    void OnCandyMissed()
+    {
+        if (candyType != CandyType.Bomb && candyType != CandyType.Nft)
+        {
+            PlayerController.instance.LooseLife();
+        }
+        Destroy(gameObject, 0.02f);
+    }
 
+    void OnCandyCatch()
+    {
+        if (candyType is CandyType.Bomb)
+        {
+            PlayerController.instance.LooseLife();
+        }
+        if (candyType is CandyType.Nft)
+        {
 
+        }
 
+        Destroy(gameObject, 0.02f);
+    }
 }

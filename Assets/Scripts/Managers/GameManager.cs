@@ -5,20 +5,23 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public CandySO[] candySoCollection;
+    public TargetSO targetSO;
+    public Target currentTarget;
 
-    [SerializeField]
-    CandySO[] candySoCollection;
-
+    [HideInInspector]
     public List<Candy> candyCollection;
 
     private void Awake()
     {
-        candyCollection = new List<Candy>();
         instance = this;
+        candyCollection = new List<Candy>();
     }
     void Start()
     {
-
+        currentTarget = new Target();
+        currentTarget.cadnyType = targetSO.GetRandomTarget().cadnyType;
+        currentTarget.amount = targetSO.GetRandomTarget().amount;
     }
 
     public void OnGameOver()
@@ -27,8 +30,5 @@ public class GameManager : MonoBehaviour
         UiHandler.instance.ActivateGameOverPanel();
     }
 
-    void CreateCandy()
-    {
-        Candy candy = new Candy();
-    }
+
 }
