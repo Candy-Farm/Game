@@ -14,19 +14,15 @@ public class UiHandler : MonoBehaviour
     [SerializeField]
     GameObject GameOverPanel;
 
-    [SerializeField]
-    Slider timerProgressBar;
+    // [SerializeField]
+    public Slider timerProgressBar;
     public static UiHandler instance;
 
     public TextMeshProUGUI targetText;
     public Image targetImage;
 
-    float gameTimer = 0;
 
-    bool startTimer = false;
-
-    [SerializeField]
-    float maxTimer;
+    // [SerializeField]
 
     private void Awake()
     {
@@ -35,15 +31,10 @@ public class UiHandler : MonoBehaviour
     void Start()
     {
         GameOverPanel.SetActive(false);
-        gameTimer = maxTimer;
-        startTimer = true;
+
     }
 
-    private void Update()
-    {
-        if (startTimer == true)
-            updateTimer();
-    }
+
 
     public void updateLifeUi()
     {
@@ -64,22 +55,6 @@ public class UiHandler : MonoBehaviour
         GameOverUiHandler.instance.ActivateWinPanel(PlayerController.instance.winGame);
     }
 
-    public void updateTimer()
-    {
-        gameTimer -= 2 * Time.deltaTime;
 
-        float progress = (gameTimer / maxTimer);
-        print(Math.Round(gameTimer));
-        print(progress);
-
-        // Mathf.Lerp(progress, (gameTimer / maxTimer),);
-        timerProgressBar.value = progress;
-
-        if (gameTimer <= 0)
-        {
-            startTimer = false;
-            GameManager.instance.OnGameOver();
-        }
-    }
 
 }

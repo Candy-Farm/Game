@@ -1208,11 +1208,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 54e8430cd8656bd43be3d2347623fb74, type: 2}
   - {fileID: 11400000, guid: 34480a464d23171428c00cdee946663e, type: 2}
   - {fileID: 11400000, guid: f57ef9c90e270904ba7ef2a968a7f627, type: 2}
-  - {fileID: 11400000, guid: b0dd8fdf63c177e44ac026340e15b797, type: 2}
+  NftSo: {fileID: 11400000, guid: b0dd8fdf63c177e44ac026340e15b797, type: 2}
   targetCollectionSO: {fileID: 11400000, guid: efc48f3b5c6ac97428680c31129849db, type: 2}
   currentTarget:
     cadnyType: 0
     amount: 0
+  maxTimer: 120
+  winBonus: 1
 --- !u!1 &941069716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,7 +1471,6 @@ MonoBehaviour:
   timerProgressBar: {fileID: 1321411624}
   targetText: {fileID: 941069718}
   targetImage: {fileID: 113924067}
-  maxTimer: 120
 --- !u!1 &1082061491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,7 +2093,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   candyPrefab: {fileID: 1064923720779294174, guid: 24989e1fed1857f4588601b7035ad8a8, type: 3}
-  spawnInterval: 5
+  spawnInterval: 2
+  nftInterval: 4
   isSpawning: 0
 --- !u!1 &1826135607
 GameObject:
@@ -2398,7 +2400,7 @@ GameObject:
   - component: {fileID: 1909436231}
   - component: {fileID: 1909436230}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: ExitGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2515,7 +2517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
+  m_Color: {r: 0.9528302, g: 0.7236116, b: 0.8963101, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2598,7 +2600,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Exit Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61b7ef18bcf6bfb44b4906a1e5dfda81, type: 2}
   m_sharedMaterial: {fileID: 5890110250631825444, guid: 61b7ef18bcf6bfb44b4906a1e5dfda81, type: 2}
@@ -2625,7 +2627,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.05
+  m_fontSize: 33.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
