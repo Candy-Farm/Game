@@ -20,8 +20,7 @@ public class TargetSO : ScriptableObject
     public Target GetRandomTarget()
     {
         int randonIndex = UnityEngine.Random.Range(0, targets.Length);
-        Target randomTarget = GetTarget(randonIndex);
-        return randomTarget;
+        return GetTarget(randonIndex);
     }
 }
 
@@ -30,4 +29,16 @@ public class Target
 {
     public CandyType cadnyType;
     public int amount;
+
+    public void updateData(Target target)
+    {
+        cadnyType = target.cadnyType;
+        amount = target.amount;
+    }
+
+    public bool updateTarget()
+    {
+        amount--;
+        return (amount == 0);
+    }
 }

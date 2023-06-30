@@ -6,29 +6,40 @@ using Candies;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
+
+    [HideInInspector]
+    public int collectedNftsCount;
     int lifeLine = 4;
+
+
 
     [HideInInspector]
     public bool winGame;
 
+    public bool canMove = false;
     private void Awake()
     {
         instance = this;
     }
     void Start()
     {
+        canMove = true;
         Bounds();
     }
 
     void Update()
     {
-        if (Input.touchCount == 1)
-            if (Camera.main.ScreenToViewportPoint(Input.mousePosition) != null)
-            {
-                Vector3 mouseInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                float xPos = Mathf.Clamp(mouseInput.x, Bounds().x, Bounds().y);
-                transform.position = new Vector3(xPos, transform.position.y, 0);
-            }
+        if (canMove)
+        {
+            if (Input.touchCount == 1)
+                if (Camera.main.ScreenToViewportPoint(Input.mousePosition) != null)
+                {
+                    Vector3 mouseInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    float xPos = Mathf.Clamp(mouseInput.x, Bounds().x, Bounds().y);
+                    transform.position = new Vector3(xPos, transform.position.y, 0);
+                }
+        }
+
     }
 
     public void LooseLife()
@@ -51,6 +62,4 @@ public class PlayerController : MonoBehaviour
         float objWidth = gameObject.GetComponent<SpriteRenderer>().bounds.size.x / 2;
         return new Vector3(-width + objWidth, width - objWidth, 0);
     }
-        // if(GameManager.instance.currentTarget.cadnyType==)
-
 }

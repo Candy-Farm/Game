@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FirstCandy
   m_EditorClassIdentifier: 
   candyType: 0
-  candyImage: {fileID: -606998331, guid: 52625805ffdabad40aad49f208012229, type: 3}
+  candyImage: {fileID: 331087518, guid: 52625805ffdabad40aad49f208012229, type: 3}

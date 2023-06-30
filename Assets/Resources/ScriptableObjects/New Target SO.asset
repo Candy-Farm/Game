@@ -14,12 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - cadnyType: 0
-    amount: 10
+    amount: 3
   - cadnyType: 1
-    amount: 5
+    amount: 4
   - cadnyType: 2
-    amount: 7
+    amount: 5
   - cadnyType: 3
-    amount: 15
-  - cadnyType: 4
-    amount: 7
+    amount: 6

@@ -8,7 +8,7 @@ public class CandySpawnController : MonoBehaviour
     GameObject candyPrefab;
     public float spawnInterval;
 
-    float candyDropDuration = 5;
+    // float candyDropDuration = 5;
 
     [HideInInspector]
     public bool isSpawning;

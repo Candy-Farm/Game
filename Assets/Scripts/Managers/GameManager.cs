@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public CandySO[] candySoCollection;
-    public TargetSO targetSO;
+    public TargetSO targetCollectionSO;
     public Target currentTarget;
-
-    [HideInInspector]
-    public List<Candy> candyCollection;
+    List<Candy> candyCollection;
 
     private void Awake()
     {
@@ -20,12 +20,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         currentTarget = new Target();
-        currentTarget.cadnyType = targetSO.GetRandomTarget().cadnyType;
-        currentTarget.amount = targetSO.GetRandomTarget().amount;
+        currentTarget.updateData(targetCollectionSO.GetRandomTarget());
+        // print(currentTarget.cadnyType + " Random Target " + currentTarget.amount);
+        UiHandler.instance.updateTargetUi(currentTarget);
     }
 
     public void OnGameOver()
     {
+        PlayerController.instance.canMove = false;
+        FindAnyObjectByType<BackgroundAnimation>().isMoving = false;
         CandySpawnController.instance.stopSpawningCandies();
         UiHandler.instance.ActivateGameOverPanel();
     }

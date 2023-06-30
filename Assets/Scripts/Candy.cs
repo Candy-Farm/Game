@@ -51,7 +51,18 @@ public class Candy : MonoBehaviour
         }
         if (candyType is CandyType.Nft)
         {
+            PlayerController.instance.collectedNftsCount++;
+        }
 
+        Target currentTarget = GameManager.instance.currentTarget;
+        if (currentTarget.cadnyType == candyType)
+        {
+            if (currentTarget.updateTarget())
+            {
+                PlayerController.instance.winGame = true;
+                GameManager.instance.OnGameOver();
+            };
+            UiHandler.instance.updateTargetUi(currentTarget);
         }
 
         Destroy(gameObject, 0.02f);
