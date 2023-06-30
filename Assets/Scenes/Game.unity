@@ -1466,8 +1466,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeLine: {fileID: 1082061491}
   GameOverPanel: {fileID: 700243985}
+  timerProgressBar: {fileID: 1321411624}
   targetText: {fileID: 941069718}
   targetImage: {fileID: 113924067}
+  maxTimer: 120
 --- !u!1 &1082061491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,7 +1659,7 @@ GameObject:
   - component: {fileID: 1321411623}
   - component: {fileID: 1321411624}
   m_Layer: 5
-  m_Name: Progress Bar
+  m_Name: TimerProgressBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

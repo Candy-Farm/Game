@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public CandySO[] candySoCollection;
     public TargetSO targetCollectionSO;
     public Target currentTarget;
+
+
     List<Candy> candyCollection;
 
     private void Awake()
@@ -21,7 +23,6 @@ public class GameManager : MonoBehaviour
     {
         currentTarget = new Target();
         currentTarget.updateData(targetCollectionSO.GetRandomTarget());
-        // print(currentTarget.cadnyType + " Random Target " + currentTarget.amount);
         UiHandler.instance.updateTargetUi(currentTarget);
     }
 
