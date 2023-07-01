@@ -45,7 +45,7 @@ public class UiHandler : MonoBehaviour
     public void updateTargetUi(Target target)
     {
         targetText.text = target.amount.ToString();
-        targetImage.sprite = Array.Find(GameManager.instance.candySoCollection, (item) => item.candyType == target.cadnyType).candyImage;
+        targetImage.sprite = Array.Find(CandyCatchManager.instance.candySoCollection, (item) => item.candyType == target.cadnyType).candyImage;
     }
 
 

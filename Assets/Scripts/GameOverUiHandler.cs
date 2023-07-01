@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameOverUiHandler : MonoBehaviour
 {
@@ -25,4 +26,14 @@ public class GameOverUiHandler : MonoBehaviour
         rewardsContainer.SetActive(activate);
     }
 
+    public void ReloadGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+
+    }
 }

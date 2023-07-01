@@ -45,6 +45,11 @@ public class Candy : MonoBehaviour
 
     void OnCandyCatch()
     {
+        if (CandyCatchManager.instance.gameOver == true)
+        {
+            Destroy(gameObject, 0.02f);
+            return;
+        }
         if (candyType is CandyType.Bomb)
         {
             PlayerController.instance.LooseLife();
@@ -54,13 +59,13 @@ public class Candy : MonoBehaviour
             PlayerController.instance.collectedNftsCount++;
         }
 
-        Target currentTarget = GameManager.instance.currentTarget;
+        Target currentTarget = CandyCatchManager.instance.currentTarget;
         if (currentTarget.cadnyType == candyType)
         {
             if (currentTarget.updateTarget())
             {
                 PlayerController.instance.winGame = true;
-                GameManager.instance.OnGameOver();
+                CandyCatchManager.instance.OnGameOver();
             };
             UiHandler.instance.updateTargetUi(currentTarget);
         }

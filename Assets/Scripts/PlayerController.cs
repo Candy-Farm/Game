@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         if (lifeLine <= 0)
         {
             winGame = false;
-            GameManager.instance.OnGameOver();
+            CandyCatchManager.instance.OnGameOver();
             return;
         }
     }
