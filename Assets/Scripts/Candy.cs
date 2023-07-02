@@ -1,5 +1,6 @@
 using UnityEngine;
 using Candies;
+using AudioSettings;
 
 public class Candy : MonoBehaviour
 {
@@ -52,11 +53,18 @@ public class Candy : MonoBehaviour
         }
         if (candyType is CandyType.Bomb)
         {
+            AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.WrongCandy.ToString());
             PlayerController.instance.LooseLife();
         }
-        if (candyType is CandyType.Nft)
+        else if (candyType is CandyType.Nft)
         {
             PlayerController.instance.collectedNftsCount++;
+            AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.CandyCatch.ToString());
+        }
+        else
+        {
+            AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.CandyCatch.ToString());
+
         }
 
         Target currentTarget = CandyCatchManager.instance.currentTarget;

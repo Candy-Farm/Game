@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using AudioSettings;
 
 public class UiHandler : MonoBehaviour
 {
@@ -31,7 +32,8 @@ public class UiHandler : MonoBehaviour
     void Start()
     {
         GameOverPanel.SetActive(false);
-
+        AudioManager.instance.StopAudio(AudioGroup.Ambience);
+        AudioManager.instance.PlayMusic(true);
     }
 
 

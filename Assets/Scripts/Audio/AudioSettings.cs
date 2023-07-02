@@ -26,7 +26,8 @@ namespace AudioSettings
         public enum BgMusic
         {
             InGame1,
-            InGame2
+            InGame2,
+            MenuMusic
         }
         public enum Ambience
         {

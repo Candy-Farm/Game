@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
     public void LooseLife()
     {
+        if (CandyCatchManager.instance.gameOver) return;
         lifeLine--;
         UiHandler.instance.updateLifeUi();
         if (lifeLine <= 0)

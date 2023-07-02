@@ -97,11 +97,11 @@ public class CandySpawnController : MonoBehaviour
         }
         Candy candy = Instantiate(candyPrefab, position, Quaternion.identity).GetComponent<Candy>();
         candy.updateCandyUiData(candySO.candyImage, candySO.candyType, (candySO.candyType == Candies.CandyType.Nft));
-        print("touched here");
+        // print("touched here");
         if (spawnInterval >= 1)
         {
             spawnInterval -= 0.3f;
-            print(spawnInterval);
+            // print(spawnInterval);
         }
     }
 
