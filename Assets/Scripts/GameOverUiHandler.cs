@@ -20,12 +20,12 @@ public class GameOverUiHandler : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        AnimateGameOverPanel();
     }
 
     public void ActivateWinPanel(bool activate)
     {
         AudioManager.instance.UpdateVolume(AudioGroup.BgMusic, 0.3f);
-        AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.SlideInandOut.ToString());
         AudioManager.instance.PlayAmbience(true);
         nftCountTextUi.text = PlayerController.instance.collectedNftsCount.ToString();
         rewardsContainer.SetActive(activate);
@@ -44,17 +44,15 @@ public class GameOverUiHandler : MonoBehaviour
     private void AnimateGameOverPanel()
     {
         var gameOverPanel = GetComponent<RectTransform>();
-        var pos = gameOverPanel.localPosition;
-        DOTween.To(() => gameOverPanel.anchoredPosition, x => gameOverPanel.anchoredPosition = x, new Vector2(0, 0), 1).OnStart(() =>
-        {
-            //Debug.Log("started");
-            // CanvasGroup transparency = navPanel.GetComponent<CanvasGroup>();
-            // if (transparency)
-            // {
-            //     transparency.alpha = 0;
-            //     transparency.DOFade(1, 1);
-
-            // }
-        });
+        float posY = gameOverPanel.anchoredPosition.y;
+        print(posY);
+        gameOverPanel.anchoredPosition = new Vector2(gameOverPanel.anchoredPosition.x, gameOverPanel.anchoredPosition.y - 100);
+        gameOverPanel.DOAnchorPosY(posY, 5);
+        AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.SlideInandOut.ToString());
+        // DOTween.To(() => gameOverPanel., y => gameOverPanel.localPosition = y, new Vector3(pos.x, pos.y, 0), 0.5f).OnStart(() =>
+        // {
+        //     // gameOverPanel.transform.localPosition =
+        //     AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.SlideInandOut.ToString());
+        // });
     }
 }

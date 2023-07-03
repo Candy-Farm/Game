@@ -81,11 +81,11 @@ public class AudioManager : MonoBehaviour
         {
             AudioSource audioSource = audioPlayerCollection.Find((player) => player.name == group.ToString()).GetComponent<AudioSource>();
             bool volumeLowered = false;
-            print(audioSource.volume);
+            // print(audioSource.volume);
             while (volumeLowered == false)
             {
                 audioSource.volume -= Time.deltaTime;
-                print(audioSource.volume);
+                // print(audioSource.volume);
 
                 if (audioSource.volume <= volume)
                 {
