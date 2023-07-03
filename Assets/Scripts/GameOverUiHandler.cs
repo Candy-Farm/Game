@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using AudioSettings;
+using DG.Tweening;
 
 public class GameOverUiHandler : MonoBehaviour
 {
@@ -39,5 +40,21 @@ public class GameOverUiHandler : MonoBehaviour
     {
         AudioManager.instance.StopAudio(AudioGroup.BgMusic);
         SceneManager.LoadScene("Menu");
+    }
+    private void AnimateGameOverPanel()
+    {
+        var gameOverPanel = GetComponent<RectTransform>();
+        var pos = gameOverPanel.localPosition;
+        DOTween.To(() => gameOverPanel.anchoredPosition, x => gameOverPanel.anchoredPosition = x, new Vector2(0, 0), 1).OnStart(() =>
+        {
+            //Debug.Log("started");
+            // CanvasGroup transparency = navPanel.GetComponent<CanvasGroup>();
+            // if (transparency)
+            // {
+            //     transparency.alpha = 0;
+            //     transparency.DOFade(1, 1);
+
+            // }
+        });
     }
 }
