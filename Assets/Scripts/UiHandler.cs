@@ -32,8 +32,16 @@ public class UiHandler : MonoBehaviour
     void Start()
     {
         GameOverPanel.SetActive(false);
-        AudioManager.instance.StopAudio(AudioGroup.Ambience);
-        AudioManager.instance.PlayMusic(true);
+        if (AudioManager.instance == null)
+        {
+
+        }
+        else
+        {
+            AudioManager.instance.StopAudio(AudioGroup.Ambience);
+            AudioManager.instance.PlayMusic(true);
+        }
+
     }
 
 
@@ -53,8 +61,8 @@ public class UiHandler : MonoBehaviour
 
     public void ActivateGameOverPanel()
     {
-        GameOverPanel.SetActive(true);
-        GameOverUiHandler.instance.ActivateWinPanel(PlayerController.instance.winGame);
+        GameOverPanel.GetComponent<GameOverUiHandler>().AnimateGameOverPanel();
+        // GameOverUiHandler.instance.ActivateWinPanel(PlayerController.instance.winGame);
     }
 
 

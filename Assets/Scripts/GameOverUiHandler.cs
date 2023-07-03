@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using AudioSettings;
 using DG.Tweening;
-
+using TMPro;
 public class GameOverUiHandler : MonoBehaviour
 {
 
@@ -15,12 +14,15 @@ public class GameOverUiHandler : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI nftCountTextUi;
 
+    [SerializeField]
+    TextMeshProUGUI winText;
+
     public static GameOverUiHandler instance;
 
     private void Awake()
     {
         instance = this;
-        AnimateGameOverPanel();
+        // AnimateGameOverPanel();
     }
 
     public void ActivateWinPanel(bool activate)
@@ -29,6 +31,7 @@ public class GameOverUiHandler : MonoBehaviour
         AudioManager.instance.PlayAmbience(true);
         nftCountTextUi.text = PlayerController.instance.collectedNftsCount.ToString();
         rewardsContainer.SetActive(activate);
+        // if()
     }
 
     public void ReloadGame()
@@ -41,18 +44,37 @@ public class GameOverUiHandler : MonoBehaviour
         AudioManager.instance.StopAudio(AudioGroup.BgMusic);
         SceneManager.LoadScene("Menu");
     }
-    private void AnimateGameOverPanel()
+    public void AnimateGameOverPanel()
     {
+        gameObject.SetActive(true);
+        ActivateWinPanel(PlayerController.instance.winGame);
         var gameOverPanel = GetComponent<RectTransform>();
         float posY = gameOverPanel.anchoredPosition.y;
         print(posY);
-        gameOverPanel.anchoredPosition = new Vector2(gameOverPanel.anchoredPosition.x, gameOverPanel.anchoredPosition.y - 100);
-        gameOverPanel.DOAnchorPosY(posY, 5);
+        print(new Vector2(gameOverPanel.anchoredPosition.x, gameOverPanel.anchoredPosition.y - gameOverPanel.rect.height));
+        gameOverPanel.anchoredPosition = new Vector2(gameOverPanel.anchoredPosition.x, gameOverPanel.anchoredPosition.y - gameOverPanel.rect.height);
+        gameOverPanel.DOAnchorPosY(posY, 0.5f);
         AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.SlideInandOut.ToString());
-        // DOTween.To(() => gameOverPanel., y => gameOverPanel.localPosition = y, new Vector3(pos.x, pos.y, 0), 0.5f).OnStart(() =>
-        // {
-        //     // gameOverPanel.transform.localPosition =
-        //     AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.SlideInandOut.ToString());
-        // });
+        updateWinText(PlayerController.instance.winGame, GetWinText());
+    }
+
+    private TextMeshProUGUI GetWinText()
+    {
+        return winText;
+    }
+
+    void updateWinText(bool win, TextMeshProUGUI winText)
+    {
+        winText.gameObject.SetActive(true);
+        if (win)
+        {
+            // winText.color = Col;
+            winText.text = "You Wine";
+        }
+        else
+        {
+            // winText.color = Color.red;
+            winText.text = "You Loss";
+        }
     }
 }

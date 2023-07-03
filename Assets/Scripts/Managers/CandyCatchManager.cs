@@ -36,6 +36,7 @@ public class CandyCatchManager : MonoBehaviour
 
         gameTimer = CandyCatchManager.instance.maxTimer;
         startTimer = true;
+        // OnGameOver();
     }
 
     private void Update()
