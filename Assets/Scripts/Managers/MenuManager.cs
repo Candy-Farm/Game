@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
 
-    [SerializeField]
+    [SerializeField] 
     GameObject TutorialPanel;
 
     [SerializeField]

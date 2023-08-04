@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using AudioSettings;
 using DG.Tweening;
-using TMPro;
 public class GameOverUiHandler : MonoBehaviour
 {
 
@@ -22,7 +21,7 @@ public class GameOverUiHandler : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        // AnimateGameOverPanel();
+        //AnimateGameOverPanel();
     }
 
     public void ActivateWinPanel(bool activate)

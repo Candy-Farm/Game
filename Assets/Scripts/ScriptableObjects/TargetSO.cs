@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Candies;
+using CandFarmEnums;
 using System;
 
 [CreateAssetMenu(fileName = "", menuName = "CandyFarm/Target")]

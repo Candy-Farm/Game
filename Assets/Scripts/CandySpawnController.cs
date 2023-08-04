@@ -15,10 +15,9 @@ public class CandySpawnController : MonoBehaviour
     public bool isSpawning;
 
     bool canDropBomb;
-
     int candyCount = 0;
-
     List<CandySO> spawnedCandies;
+
     public static CandySpawnController instance;
 
     private void Awake()
@@ -30,18 +29,18 @@ public class CandySpawnController : MonoBehaviour
     {
         spawnedCandies = new List<CandySO>();
         isSpawning = true;
-        StartCoroutine(spawnCandy());
-        StartCoroutine(spawnNft());
-    }
-    IEnumerator spawnCandy()
-    {
-        yield return new WaitForSeconds(2);
-        while (isSpawning)
+
+        if (isSpawning)
         {
-            DropCandy();
-            yield return new WaitForSeconds(spawnInterval);
+            InvokeRepeating(nameof(spawnCandy), 2, spawnInterval);
         }
     }
+
+    public void spawnCandy()
+    {
+        DropCandy();
+    }
+
     IEnumerator spawnNft()
     {
         yield return new WaitForSeconds(10);
@@ -60,6 +59,7 @@ public class CandySpawnController : MonoBehaviour
         float randWidth = Random.Range(-width + 0.5f, width - 0.5f);
         CreateCandy(new Vector3(randWidth, position.y, position.z));
     }
+
     void DropNft()
     {
         Camera cam = Camera.main;
@@ -68,9 +68,9 @@ public class CandySpawnController : MonoBehaviour
         float randWidth = Random.Range(-width + 0.5f, width - 0.5f);
         CreateNft(new Vector3(randWidth, position.y, position.z));
     }
+
     public void stopSpawningCandies()
     {
-        isSpawning = false;
         StopAllCoroutines();
     }
 
@@ -96,7 +96,7 @@ public class CandySpawnController : MonoBehaviour
             candyCount = 0;
         }
         Candy candy = Instantiate(candyPrefab, position, Quaternion.identity).GetComponent<Candy>();
-        candy.updateCandyUiData(candySO.candyImage, candySO.candyType, (candySO.candyType == Candies.CandyType.Nft));
+        candy.updateCandyUiData(candySO.candyImage, candySO.candyType, (candySO.candyType == CandFarmEnums.CandyType.Nft));
         // print("touched here");
         if (spawnInterval >= 1)
         {
@@ -109,6 +109,6 @@ public class CandySpawnController : MonoBehaviour
     {
         CandySO nftItem = CandyCatchManager.instance.NftSo;
         Candy candy = Instantiate(candyPrefab, position, Quaternion.identity).GetComponent<Candy>();
-        candy.updateCandyUiData(nftItem.candyImage, nftItem.candyType, (nftItem.candyType == Candies.CandyType.Nft));
+        candy.updateCandyUiData(nftItem.candyImage, nftItem.candyType, (nftItem.candyType == CandFarmEnums.CandyType.Nft));
     }
 }

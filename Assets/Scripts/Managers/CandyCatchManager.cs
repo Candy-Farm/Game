@@ -55,7 +55,7 @@ public class CandyCatchManager : MonoBehaviour
         }
         PlayerController.instance.canMove = false;
         FindAnyObjectByType<BackgroundAnimation>().isMoving = false;
-        CandySpawnController.instance.stopSpawningCandies();
+        //CandySpawnController.instance.stopSpawningCandies();
         UiHandler.instance.ActivateGameOverPanel();
     }
 

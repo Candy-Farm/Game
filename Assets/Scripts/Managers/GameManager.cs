@@ -6,8 +6,18 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
+
+    public PlayerManager player;
     void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

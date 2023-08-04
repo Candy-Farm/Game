@@ -23,16 +23,16 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    private void Start()
+    {
         audioPlayerCollection = new List<GameObject>();
     }
-
     AudioSource GetAudioSource(AudioGroup audioGroup)
     {
-        // print(audioGroup);
         bool audioExists = audioPlayerCollection.Exists((player) => player.name == audioGroup.ToString());
         if (audioExists)
         {
-            // print("well enough");
             AudioSource audioSource = audioPlayerCollection.Find((player) => player.name == audioGroup.ToString()).GetComponent<AudioSource>();
             return audioSource;
         }
@@ -81,12 +81,9 @@ public class AudioManager : MonoBehaviour
         {
             AudioSource audioSource = audioPlayerCollection.Find((player) => player.name == group.ToString()).GetComponent<AudioSource>();
             bool volumeLowered = false;
-            // print(audioSource.volume);
             while (volumeLowered == false)
             {
                 audioSource.volume -= Time.deltaTime;
-                // print(audioSource.volume);
-
                 if (audioSource.volume <= volume)
                 {
                     volumeLowered = true;

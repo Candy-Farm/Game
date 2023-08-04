@@ -1,5 +1,5 @@
 using UnityEngine;
-using Candies;
+using CandFarmEnums;
 using AudioSettings;
 
 public class Candy : MonoBehaviour
