@@ -68,7 +68,7 @@ public class GameOverUiHandler : MonoBehaviour
         if (win)
         {
             // winText.color = Col;
-            winText.text = "You Wine";
+            winText.text = "You Win";
         }
         else
         {

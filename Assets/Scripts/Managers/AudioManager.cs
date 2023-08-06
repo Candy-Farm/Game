@@ -14,20 +14,18 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    private void Start()
-    {
+        // if (instance == null)
+        // {
+        instance = this;
+        //     DontDestroyOnLoad(gameObject);
+        // }
+        // else
+        // {
+        //     Destroy(gameObject);
+        // }
         audioPlayerCollection = new List<GameObject>();
     }
+
     AudioSource GetAudioSource(AudioGroup audioGroup)
     {
         bool audioExists = audioPlayerCollection.Exists((player) => player.name == audioGroup.ToString());

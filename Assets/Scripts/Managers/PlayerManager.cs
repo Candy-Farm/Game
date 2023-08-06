@@ -5,6 +5,5 @@ using UnityEngine;
 public class PlayerManager
 {
     public PlayerData PlayerData;
-
-  
+    
 }
