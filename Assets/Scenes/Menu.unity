@@ -241,6 +241,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TutorialPanel: {fileID: 1519054093}
   MenuPanel: {fileID: 554945753}
+  PlayerProfilePic: {fileID: 0}
+  playerNameText: {fileID: 0}
+  playerLevelText: {fileID: 0}
+  playerExpProgress: {fileID: 0}
+  PlayerRankImage: {fileID: 0}
 --- !u!1 &26706302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,6 +1551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2854dac313fb934e82f93073f060eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: e5d6da2c27f302e449bf384c0ffc611c, type: 2}
 --- !u!114 &775690571
 MonoBehaviour:
   m_ObjectHideFlags: 0

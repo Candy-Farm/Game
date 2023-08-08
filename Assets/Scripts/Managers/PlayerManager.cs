@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager
+[CreateAssetMenu(fileName = "", menuName = "CandyFarm/PlayerManager")]
+public class PlayerManager : ScriptableObject
 {
     public PlayerData PlayerData;
-    
+
 }
