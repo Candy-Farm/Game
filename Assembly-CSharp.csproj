@@ -242,6 +242,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\CandySpawnController.cs" />
      <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\ColorImage.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\ProfilePictureDataSO.cs" />
      <None Include="Assets\unity-ui-extensions\Resources\Shaders\UIAdditive.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

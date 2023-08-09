@@ -10,13 +10,15 @@ public class PlayerData
     public string playerId;
     public string playerName;
     public int playerLevel;
-    public PlayerRank rank;
+    public float expLevel;
+    public int pictureIndex;
 
     public void LoadPlayerData(PlayerData playerData)
     {
         playerId = playerData.playerId;
         playerName = playerData.playerName;
-        rank = playerData.rank;
+        expLevel = playerData.expLevel;
         playerLevel = playerData.playerLevel;
+        pictureIndex = playerData.pictureIndex;
     }
 }

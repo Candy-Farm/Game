@@ -1551,6 +1551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2854dac313fb934e82f93073f060eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  profilePicDataSO: {fileID: 11400000, guid: 469b9535ed043cd4582bb188af50b8b7, type: 2}
   player: {fileID: 11400000, guid: e5d6da2c27f302e449bf384c0ffc611c, type: 2}
 --- !u!114 &775690571
 MonoBehaviour:

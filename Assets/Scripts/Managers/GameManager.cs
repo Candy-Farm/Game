@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    public ProfilePictureDataSO profilePicDataSO;
     public static GameManager instance;
 
     public PlayerManager player;
@@ -19,5 +19,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // player.PlayerData = new PlayerData();
     }
+
+
 }

@@ -16,4 +16,5 @@ MonoBehaviour:
     playerId: playerId
     playerName: Nk Presh
     playerLevel: 20
-    rank: 0
+    expLevel: 0
+    pictureIndex: 1

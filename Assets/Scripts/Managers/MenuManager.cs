@@ -34,7 +34,7 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         Invoke(nameof(init), (AudioManager.instance == null) ? 5 : 0);
-        // onCloseTutorialClicked();
+        UpdateUserProfileUi();
     }
 
     void init()
@@ -65,5 +65,15 @@ public class MenuManager : MonoBehaviour
         AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
         MenuPanel.SetActive(true);
         TutorialPanel.SetActive(false);
+    }
+
+    private void UpdateUserProfileUi()
+    {
+        var manager = GameManager.instance;
+        print(manager.player.PlayerData);
+        // PlayerProfilePic.sprite = GameManager.instance.profilePicDataSO.GetImage(manager.player.PlayerData);
+        // playerNameText.text = manager.player.PlayerData.playerName;
+        // playerLevelText.text = "Lv " + manager.player.PlayerData.playerLevel.ToString();
+
     }
 }
