@@ -691,9 +691,9 @@
       <Project>{54dd85f6-38de-e026-37ca-2e6ea674c023}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{7aad81e5-569d-6566-839c-b07d38027e66}</Project>
-      <Name>Unity.2D.Animation.Editor</Name>
+    <ProjectReference Include="Coffee.SoftMaskForUGUI.Editor.csproj">
+      <Project>{ee824ce0-5ff4-ce9a-696f-4ca885076e37}</Project>
+      <Name>Coffee.SoftMaskForUGUI.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
       <Project>{b3e9712e-8e40-1a8c-e47d-dcf6ac35446c}</Project>
@@ -710,6 +710,10 @@
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
       <Project>{6e7653c7-b171-bc61-cc6f-4d330ad45aa0}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
+      <Project>{7aad81e5-569d-6566-839c-b07d38027e66}</Project>
+      <Name>Unity.2D.Animation.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PsdPlugin.csproj">
       <Project>{956cc33e-182c-421b-dd45-2ac775b093c4}</Project>
@@ -791,6 +795,10 @@
       <Project>{ce34b9ba-d349-c69f-a287-9d6e9aab36e4}</Project>
       <Name>Unity.2D.Tilemap.Extras.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityUIExtensions.csproj">
+      <Project>{f49adf45-d260-a385-a2d0-5b96652e5741}</Project>
+      <Name>UnityUIExtensions</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
       <Project>{3cd192e1-b170-f5c5-1984-776a8fc07589}</Project>
       <Name>Unity.VisualScripting.Core</Name>
@@ -802,6 +810,10 @@
     <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
       <Project>{e22fe36f-c2c0-51f9-c8cb-ef4798a3ac88}</Project>
       <Name>Unity.2D.IK.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Coffee.SoftMaskForUGUI.csproj">
+      <Project>{2b24ee75-96cf-0822-4898-d05b8509432f}</Project>
+      <Name>Coffee.SoftMaskForUGUI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
       <Project>{293e0782-c54f-3abd-b694-6fc25365688b}</Project>
@@ -846,6 +858,10 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{f3a07bd7-45fb-27f3-75fd-370b7b787aa9}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityUIExtensions.editor.csproj">
+      <Project>{0e7baa26-5dab-a769-917e-4091a83bbe9d}</Project>
+      <Name>UnityUIExtensions.editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

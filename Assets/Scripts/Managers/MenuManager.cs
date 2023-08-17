@@ -5,7 +5,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.UI.Extensions;
 
 public class MenuManager : MonoBehaviour
 {
@@ -25,8 +24,8 @@ public class MenuManager : MonoBehaviour
     TextMeshProUGUI playerLevelText;
 
     [Header("Player Ranking")]
-    [SerializeField]
-    RadialSlider playerExpProgress;
+    // [SerializeField]
+    // RadialSlider playerExpProgress;
     [SerializeField]
     Image PlayerRankImage;
 
@@ -70,10 +69,10 @@ public class MenuManager : MonoBehaviour
     private void UpdateUserProfileUi()
     {
         var manager = GameManager.instance;
-        print(manager.player.PlayerData);
-        // PlayerProfilePic.sprite = GameManager.instance.profilePicDataSO.GetImage(manager.player.PlayerData);
-        // playerNameText.text = manager.player.PlayerData.playerName;
-        // playerLevelText.text = "Lv " + manager.player.PlayerData.playerLevel.ToString();
+        // print(manager.player.PlayerData);
+        PlayerProfilePic.sprite = GameManager.instance.profilePicDataSO.GetImage(manager.player.PlayerData.pictureIndex);
+        playerNameText.text = manager.player.PlayerData.playerName;
+        playerLevelText.text = "Lv " + manager.player.PlayerData.playerLevel.ToString();
 
     }
 }
