@@ -12,20 +12,8 @@ namespace CandFarmEnums
         Nft
     }
 
-    public enum PlayerRank
+    public enum CurrencyType
     {
-        Novis,
-        Learner,
-        Proffessional,
-        Master,
-        Lord
-    }
-
-    public enum GameMode
-    {
-        Easy,
-        Difficult,
-        Hard,
-        Tough
+        Gold
     }
 }

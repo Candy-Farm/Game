@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerManager : ScriptableObject
 {
     public PlayerData PlayerData;
-
+    
     public Sprite GetProfilePicture(int Index)
     {
         return GameManager.Instance.profilePicDataSO.GetImage(Index);

@@ -42,11 +42,11 @@ public class MenuUiManager : MonoBehaviour
     //     AudioManager.instance.PlaySound(AudioGroup.BgMusic, AudioClipNames.BgMusic.MenuMusic.ToString(), true);
     //     AudioManager.instance.PlayAmbience(true);
     // }
-    // public void onPlayGame()
-    // {
-    //     AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
-    //     SceneManager.LoadScene("Game");
-    // }
+    public void onPlayGame()
+    {
+        AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
+        SceneManager.LoadScene("Game");
+    }
     // public void onExit()
     // {
     //     AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());

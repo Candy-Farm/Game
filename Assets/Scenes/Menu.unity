@@ -218,9 +218,9 @@ RectTransform:
   m_Children:
   - {fileID: 256612967}
   - {fileID: 919627185}
-  - {fileID: 307360106}
-  - {fileID: 850593038}
   - {fileID: 1629918005}
+  - {fileID: 850593038}
+  - {fileID: 307360106}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1001,7 +1001,7 @@ RectTransform:
   - {fileID: 1521036407}
   - {fileID: 2004392663}
   m_Father: {fileID: 19204280}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.08666667}
@@ -1577,7 +1577,7 @@ GameObject:
   - component: {fileID: 545596379}
   - component: {fileID: 545596378}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: PlayGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6770,7 +6770,7 @@ RectTransform:
   m_Children:
   - {fileID: 799477229}
   m_Father: {fileID: 19204280}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
