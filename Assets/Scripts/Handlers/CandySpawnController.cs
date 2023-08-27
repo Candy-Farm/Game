@@ -14,17 +14,24 @@ public class CandySpawnController : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(createCandy), 2, 1);
+        InvokeRepeating(nameof(SpawnCandy), 2, 1);
+        print(GetHorizontalBounds());
 
     }
-    public void createCandy()
+    public void SpawnCandy()
     {
-        var candy = Instantiate(candyPrefab, transform.position, Quaternion.identity);
+        float randPosX = Random.Range(-GetHorizontalBounds() / 1.5f, GetHorizontalBounds() / 1.5f);
+        Vector3 pos = new Vector3(randPosX, transform.position.y);
+        var candy = Instantiate(candyPrefab, pos, Quaternion.identity)
+        .GetComponent<CandyItem>();
+        int randIndex = Random.Range(0, candyCollection.Length);
+        candy.updateCandyItem(candyCollection[randIndex]);
     }
 
-
-    public void onCandyDropped(GameObject candy)
+    public float GetHorizontalBounds()
     {
-        Destroy(candy);
+        float hSize = gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
+        return hSize;
     }
+
 }

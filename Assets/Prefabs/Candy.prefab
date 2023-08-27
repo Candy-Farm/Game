@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1064923720779294170}
   - component: {fileID: 1064923720779294171}
   - component: {fileID: 1064923720779294168}
-  - component: {fileID: 6903694767839158638}
+  - component: {fileID: 9063883943596605074}
   m_Layer: 0
   m_Name: Candy
   m_TagString: Candy
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0.01, y: 0}
   serializedVersion: 2
   m_Radius: 0.69
---- !u!114 &6903694767839158638
+--- !u!114 &9063883943596605074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1064923720779294174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2a63f7743dfaa24087c7a65408e086d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e25f74416bfdc4458a4fe71e4cee5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  candyType: 0

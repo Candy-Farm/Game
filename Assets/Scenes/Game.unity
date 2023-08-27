@@ -1552,7 +1552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579435427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.28, z: 0}
+  m_LocalPosition: {x: 0, y: -6.04, z: 0}
   m_LocalScale: {x: 10.6325, y: 1.36405, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2994,7 +2994,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935942601}
-  - component: {fileID: 935942602}
   - component: {fileID: 935942603}
   m_Layer: 0
   m_Name: GameManager
@@ -3018,34 +3017,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &935942602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935942600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 147909ad5aa2fa543be9265b8fcfd11f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  candySoCollection:
-  - {fileID: 11400000, guid: 6727a66a2519b9944bec86dd2a193e1f, type: 2}
-  - {fileID: 11400000, guid: 322c8bf85c8a30540b1b1b9d99853b57, type: 2}
-  - {fileID: 11400000, guid: 54e8430cd8656bd43be3d2347623fb74, type: 2}
-  - {fileID: 11400000, guid: 34480a464d23171428c00cdee946663e, type: 2}
-  - {fileID: 11400000, guid: f57ef9c90e270904ba7ef2a968a7f627, type: 2}
-  NftSo: {fileID: 11400000, guid: b0dd8fdf63c177e44ac026340e15b797, type: 2}
-  targetCollectionSO: {fileID: 11400000, guid: efc48f3b5c6ac97428680c31129849db, type: 2}
-  currentTarget:
-    cadnyType: 0
-    amount: 0
-  maxTimer: 120
-  gameTimer: 0
-  startTimer: 0
-  gameOver: 0
-  winBonus: 1
 --- !u!114 &935942603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4981,7 +4952,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   candyPrefab: {fileID: 1064923720779294174, guid: 24989e1fed1857f4588601b7035ad8a8, type: 3}
-  candyBase: {fileID: 579435427}
+  candyCollection:
+  - candyType: 0
+    sprite: {fileID: -606998331, guid: 52625805ffdabad40aad49f208012229, type: 3}
+  - candyType: 1
+    sprite: {fileID: -223699635, guid: 52625805ffdabad40aad49f208012229, type: 3}
+  - candyType: 2
+    sprite: {fileID: 331087518, guid: 52625805ffdabad40aad49f208012229, type: 3}
+  - candyType: 3
+    sprite: {fileID: -54815578, guid: 52625805ffdabad40aad49f208012229, type: 3}
+  explosive:
+    candyType: 0
+    sprite: {fileID: 0}
+  Nft:
+    candyType: 0
+    sprite: {fileID: 0}
 --- !u!1 &1769165204
 GameObject:
   m_ObjectHideFlags: 0
