@@ -15,13 +15,13 @@ public class MenuUiManager : MonoBehaviour
     // [SerializeField]
     // GameObject MenuPanel;
 
-    // [Header("Player Profile")]
-    // [SerializeField]
-    // Image PlayerProfilePic;
-    // [SerializeField]
-    // TextMeshProUGUI playerNameText;
-    // [SerializeField]
-    // TextMeshProUGUI playerLevelText;
+    [Header("Player Profile")]
+    [SerializeField]
+    Image PlayerProfilePic;
+    [SerializeField]
+    TextMeshProUGUI playerNameText;
+    [SerializeField]
+    TextMeshProUGUI playerLevelText;
 
     // [Header("Player Ranking")]
     // // [SerializeField]
@@ -30,11 +30,12 @@ public class MenuUiManager : MonoBehaviour
     // Image PlayerRankImage;
 
 
-    // void Start()
-    // {
-    //     Invoke(nameof(init), (AudioManager.instance == null) ? 5 : 0);
-    //     UpdateUserProfileUi();
-    // }
+    void Start()
+    {
+        // Invoke(nameof(init), (AudioManager.instance == null) ? 5 : 0);
+        UpdateUserProfileUi();
+
+    }
 
     // void init()
     // {
@@ -66,13 +67,13 @@ public class MenuUiManager : MonoBehaviour
     //     TutorialPanel.SetActive(false);
     // }
 
-    // private void UpdateUserProfileUi()
-    // {
-    //     var manager = GameManager.instance;
-    //     // print(manager.player.PlayerData);
-    //     PlayerProfilePic.sprite = GameManager.instance.profilePicDataSO.GetImage(manager.player.PlayerData.pictureIndex);
-    //     playerNameText.text = manager.player.PlayerData.playerName;
-    //     playerLevelText.text = "Lv " + manager.player.PlayerData.playerLevel.ToString();
+    private void UpdateUserProfileUi()
+    {
+        PlayerManager player = MenuHandler.Instance.GetPlayer();
+        var playerData = player.PlayerData;
+        PlayerProfilePic.sprite = player.GetProfilePicture(playerData.pictureIndex);
+        playerNameText.text = playerData.playerName;
+        playerLevelText.text = "Lvl " + playerData.playerLevel.ToString();
 
-    // }
+    }
 }

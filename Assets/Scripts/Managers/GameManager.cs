@@ -1,27 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI.Extensions;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     public ProfilePictureDataSO profilePicDataSO;
-    public static GameManager instance;
 
+    MenuHandler mainMenu;
     public PlayerManager player;
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
+        mainMenu = new MenuHandler();
         // player.PlayerData = new PlayerData();
     }
 
+    void Start()
+    {
+
+    }
 
 }

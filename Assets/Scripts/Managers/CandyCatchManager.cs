@@ -21,13 +21,13 @@ public class CandyCatchManager : MonoBehaviour
     public int winBonus;
 
 
-    List<Candy> candyCollection;
+    // List<Candy> candyCollection;
 
-    private void Awake()
-    {
-        instance = this;
-        candyCollection = new List<Candy>();
-    }
+    // private void Awake()
+    // {
+    //     instance = this;
+    //     candyCollection = new List<Candy>();
+    // }
     void Start()
     {
         currentTarget = new Target();
