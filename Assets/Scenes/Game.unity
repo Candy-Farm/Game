@@ -2454,8 +2454,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812593462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.1114, y: -3.6177, z: 0}
-  m_LocalScale: {x: 17.57653, y: 10.2092495, z: 1.2262138}
+  m_LocalPosition: {x: 4.9669, y: -3.736, z: 0}
+  m_LocalScale: {x: 17.983696, y: 10.445749, z: 1.2546194}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 268983595}
@@ -6006,7 +6006,7 @@ GameObject:
   - component: {fileID: 2114038424}
   - component: {fileID: 2114038425}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Basket
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6072,7 +6072,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114038421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.33, z: 0.06}
+  m_LocalPosition: {x: 0, y: -3.54, z: 0.06}
   m_LocalScale: {x: 0.28051776, y: 0.30113018, z: 0.040378734}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6114,13 +6114,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2114038421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e471afa35213a2f4cb33f45a4aefa9aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 45b54fa63bc285449a9623c0776c2fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectedNftsCount: 0
-  lifeLine: 4
-  winGame: 0
-  canMove: 0
 --- !u!1 &2129539372
 GameObject:
   m_ObjectHideFlags: 0

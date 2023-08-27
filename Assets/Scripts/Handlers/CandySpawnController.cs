@@ -15,8 +15,6 @@ public class CandySpawnController : MonoBehaviour
     private void Start()
     {
         InvokeRepeating(nameof(SpawnCandy), 2, 1);
-        print(GetHorizontalBounds());
-
     }
     public void SpawnCandy()
     {

@@ -44,7 +44,7 @@ public class MenuUiManager : MonoBehaviour
     // }
     public void onPlayGame()
     {
-        AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
+        AudioManager.Instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
         SceneManager.LoadScene("Game");
     }
     // public void onExit()

@@ -6,23 +6,12 @@ using AudioSettings;
 
 public class AudioManager : Singleton<AudioManager>
 {
-    public static AudioManager instance;
-
     List<GameObject> audioPlayerCollection;
 
     public AudioClip[] GameAudioClips;
 
     private void Awake()
     {
-        // if (instance == null)
-        // {
-        instance = this;
-        //     DontDestroyOnLoad(gameObject);
-        // }
-        // else
-        // {
-        //     Destroy(gameObject);
-        // }
         audioPlayerCollection = new List<GameObject>();
     }
 
