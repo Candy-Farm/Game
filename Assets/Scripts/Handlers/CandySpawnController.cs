@@ -16,6 +16,11 @@ public class CandySpawnController : MonoBehaviour
     {
         InvokeRepeating(nameof(SpawnCandy), 2, 1);
     }
+
+    private void Init()
+    {
+        
+    }
     public void SpawnCandy()
     {
         float randPosX = Random.Range(-GetHorizontalBounds() / 1.5f, GetHorizontalBounds() / 1.5f);
