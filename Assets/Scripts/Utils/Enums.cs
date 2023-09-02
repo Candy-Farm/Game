@@ -16,4 +16,20 @@ namespace CandFarmEnums
     {
         Gold
     }
+
+    public enum GameType
+    {
+        WaveMode,
+        FastPaceMode,
+        EscapeBombMode,
+        TargetCandyMode
+    }
+
+    public enum ItemType
+    {
+        Magnet,
+        Speed,
+        booster,
+        HealthBackupKey
+    }
 }

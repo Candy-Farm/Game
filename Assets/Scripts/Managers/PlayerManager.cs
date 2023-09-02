@@ -1,12 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Models;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "", menuName = "CandyFarm/PlayerManager")]
-public class PlayerManager : ScriptableObject
+[Serializable]
+public class PlayerManager
 {
-    public PlayerData PlayerData;
+    public PlayerDataSO PlayerData;
+
+    public Item[] playerItems;
     
+
+
     public Sprite GetProfilePicture(int Index)
     {
         return GameManager.Instance.profilePicDataSO.GetImage(Index);
