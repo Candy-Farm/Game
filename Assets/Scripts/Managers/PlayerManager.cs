@@ -10,11 +10,5 @@ public class PlayerManager
     public PlayerDataSO PlayerData;
 
     public Item[] playerItems;
-    
 
-
-    public Sprite GetProfilePicture(int Index)
-    {
-        return GameManager.Instance.profilePicDataSO.GetImage(Index);
-    }
 }

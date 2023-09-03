@@ -9,12 +9,6 @@ using UnityEngine.UI;
 public class MenuUiManager : MonoBehaviour
 {
 
-    // [SerializeField]
-    // GameObject TutorialPanel;
-
-    // [SerializeField]
-    // GameObject MenuPanel;
-
     [Header("Player Profile")]
     [SerializeField]
     Image PlayerProfilePic;
@@ -23,25 +17,19 @@ public class MenuUiManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI playerLevelText;
 
-    // [Header("Player Ranking")]
-    // // [SerializeField]
-    // // RadialSlider playerExpProgress;
-    // [SerializeField]
-    // Image PlayerRankImage;
-
 
     void Start()
     {
-        // Invoke(nameof(init), (AudioManager.instance == null) ? 5 : 0);
+        Invoke(nameof(init), (AudioManager.Instance == null) ? 5 : 0);
         UpdateUserProfileUi();
 
     }
 
-    // void init()
-    // {
-    //     AudioManager.instance.PlaySound(AudioGroup.BgMusic, AudioClipNames.BgMusic.MenuMusic.ToString(), true);
-    //     AudioManager.instance.PlayAmbience(true);
-    // }
+    void init()
+    {
+        AudioManager.Instance.PlaySound(AudioGroup.BgMusic, AudioClipNames.BgMusic.MenuMusic.ToString(), true);
+        AudioManager.Instance.PlayAmbience(true);
+    }
     public void onPlayGame()
     {
         AudioManager.Instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
@@ -49,7 +37,7 @@ public class MenuUiManager : MonoBehaviour
     }
     // public void onExit()
     // {
-    //     AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
+    //     AudioManager.Instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
     //     Application.Quit();
     // }
 
@@ -71,7 +59,7 @@ public class MenuUiManager : MonoBehaviour
     {
         PlayerManager player = MenuHandler.Instance.GetPlayer();
         var playerData = player.PlayerData;
-        PlayerProfilePic.sprite = player.GetProfilePicture(playerData.pictureIndex);
+        PlayerProfilePic.sprite = GameManager.Instance.GetProfilePicture(playerData.pictureIndex);
         playerNameText.text = playerData.playerName;
         playerLevelText.text = "Lvl " + playerData.playerLevel.ToString();
 

@@ -10,8 +10,10 @@ public class GameManager : Singleton<GameManager>
 {
     public ProfilePictureDataSO profilePicDataSO;
 
-    MenuHandler mainMenu;
+    [SerializeField]
     public PlayerManager player;
+
+    MenuHandler mainMenu;
     void Awake()
     {
         LoadPlayerData();
@@ -56,7 +58,13 @@ public class GameManager : Singleton<GameManager>
         };
     }
 
-    public void LoadCampaignData(){
+    public void LoadCampaignData()
+    {
 
+    }
+
+    public Sprite GetProfilePicture(int Index)
+    {
+        return profilePicDataSO.GetImage(Index);
     }
 }

@@ -2326,7 +2326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profilePicDataSO: {fileID: 11400000, guid: 469b9535ed043cd4582bb188af50b8b7, type: 2}
-  player: {fileID: 11400000, guid: e5d6da2c27f302e449bf384c0ffc611c, type: 2}
+  player:
+    PlayerData: {fileID: 11400000, guid: af78bb92ee8128d44b3eba4c89269336, type: 2}
 --- !u!1 &789909823
 GameObject:
   m_ObjectHideFlags: 0
