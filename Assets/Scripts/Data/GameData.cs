@@ -12,6 +12,7 @@ namespace GameData
             public GameType gameType;
             public Reward reward;
             public bool iscompleted;
+            public float expBonus;
         }
     }
 
