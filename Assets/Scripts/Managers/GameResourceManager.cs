@@ -2,11 +2,15 @@ using System.Resources;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameResourceManager
 {
-    public IEnumerator<Object> GetResourceItemFromDir()
+    public IEnumerator GetSOFromDir(string dir, Action<PlayerDataSO> callback)
     {
-        yield return Resources.Load<Object>("Resources/ScriptableObjects/New Profile Picture Data SO.asset");
+        PlayerDataSO scriptable;
+        yield return scriptable = Resources.Load<PlayerDataSO>(dir);
+        Debug.Log(scriptable);
+        callback(scriptable);
     }
 }

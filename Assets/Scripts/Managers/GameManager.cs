@@ -18,6 +18,8 @@ public class GameManager : Singleton<GameManager>
     MenuHandler mainMenu;
     void Awake()
     {
+        gameResources = new GameResourceManager();
+        GetSOItem();
         LoadPlayerData();
         mainMenu = new MenuHandler();
     }
@@ -27,10 +29,20 @@ public class GameManager : Singleton<GameManager>
 
     }
 
+    public void GetSOItem()
+    {
+        StartCoroutine(gameResources.GetSOFromDir("ScriptableObjects/PlayerData", (item) =>
+        {
+            print(item);
+        }));
+    }
+
+
     public void LoadPlayerData()
     {
         player = new PlayerManager()
         {
+            PlayerData = null,
             playerItems = new Item[]{
                 new Item{
                     itemName=ItemType.Speed.ToString(),
@@ -58,6 +70,7 @@ public class GameManager : Singleton<GameManager>
                 },
             }
         };
+        
     }
 
     public void LoadCampaignData()

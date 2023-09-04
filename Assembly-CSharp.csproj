@@ -87,6 +87,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\CampaignData.cs" />
      <Compile Include="Assets\Scripts\Utils\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameSceneManager.cs" />
      <Compile Include="Assets\Scripts\Managers\CampaignDataManager.cs" />
      <Compile Include="Assets\Scripts\Data\GameData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -96,6 +97,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\Handlers\CandySpawnController.cs" />
+     <Compile Include="Assets\Scripts\SOloader.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

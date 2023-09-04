@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using AudioSettings;
+using CandFarmEnums;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -35,33 +36,40 @@ public class MenuUiManager : MonoBehaviour
         AudioManager.Instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
         SceneManager.LoadScene("Game");
     }
-    // public void onExit()
-    // {
-    //     AudioManager.Instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
-    //     Application.Quit();
-    // }
 
-    // public void onTutorialClicked()
-    // {
-    //     AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
-    //     MenuPanel.SetActive(false);
-    //     TutorialPanel.SetActive(true);
-    // }
+    public void EnterInventory()
+    {
+        SceneManager.LoadScene(SceneNames.Inventory.ToString());
+    }
 
-    // public void onCloseTutorialClicked()
-    // {
-    //     AudioManager.instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
-    //     MenuPanel.SetActive(true);
-    //     TutorialPanel.SetActive(false);
-    // }
+    public void EnterLeaderboard()
+    {
+        SceneManager.LoadScene(SceneNames.Leaderboard.ToString());
+    }
+
+    public void EnterProfile()
+    {
+        SceneManager.LoadScene(SceneNames.Userprofile.ToString());
+    }
+
+    public void EnterTutorial()
+    {
+        SceneManager.LoadScene(SceneNames.Tutorial.ToString());
+    }
+
+    public void EnterShop()
+    {
+        SceneManager.LoadScene(SceneNames.Store.ToString());
+    }
+
 
     private void UpdateUserProfileUi()
     {
         PlayerManager player = MenuHandler.Instance.GetPlayer();
-        var playerData = player.PlayerData;
-        PlayerProfilePic.sprite = GameManager.Instance.GetProfilePicture(playerData.pictureIndex);
-        playerNameText.text = playerData.playerName;
-        playerLevelText.text = "Lvl " + playerData.playerLevel.ToString();
+        // var playerData = player.PlayerData;
+        // PlayerProfilePic.sprite = GameManager.Instance.GetProfilePicture(playerData.pictureIndex);
+        // playerNameText.text = playerData.playerName;
+        // playerLevelText.text = "Lvl " + playerData.playerLevel.ToString();
 
     }
 }
