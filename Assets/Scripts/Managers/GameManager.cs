@@ -13,6 +13,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     public PlayerManager player;
 
+    GameResourceManager gameResources;
+
     MenuHandler mainMenu;
     void Awake()
     {
