@@ -23,4 +23,11 @@ namespace Models
         public float amount;
     }
 
+    public class CampaignStage
+    {
+        public int Level;
+        public GameType gameType;
+        
+    }
+
 }

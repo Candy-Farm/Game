@@ -13,12 +13,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     public PlayerManager player;
 
-    GameResourceManager gameResources;
 
     MenuHandler mainMenu;
     void Awake()
     {
-        gameResources = new GameResourceManager();
         GetSOItem();
         LoadPlayerData();
         mainMenu = new MenuHandler();
@@ -31,10 +29,7 @@ public class GameManager : Singleton<GameManager>
 
     public void GetSOItem()
     {
-        StartCoroutine(gameResources.GetSOFromDir("ScriptableObjects/PlayerData", (item) =>
-        {
-            print(item);
-        }));
+
     }
 
 
@@ -43,34 +38,13 @@ public class GameManager : Singleton<GameManager>
         player = new PlayerManager()
         {
             PlayerData = null,
-            playerItems = new Item[]{
-                new Item{
-                    itemName=ItemType.Speed.ToString(),
-                    itemDescription="the speed item manipulates the speed of a falling candy in the game so it doesn't fall too fast",
-                    itemAmount=200f,
-                    itemType=ItemType.Speed
-                },
-                new Item{
-                    itemName=ItemType.Magnet.ToString(),
-                    itemDescription="the Magnet item manipulates the Magnet of a falling candy in the game so it doesn't fall too fast",
-                    itemAmount=200f,
-                    itemType=ItemType.Magnet
-                },
-                new Item{
-                    itemName=ItemType.booster.ToString(),
-                    itemDescription="the booster item manipulates the booster of a falling candy in the game so it doesn't fall too fast",
-                    itemAmount=200f,
-                    itemType=ItemType.booster
-                },
-                new Item{
-                    itemName=ItemType.HealthBackupKey.ToString(),
-                    itemDescription="the HealthBackupKey item manipulates the HealthBackupKey of a falling candy in the game so it doesn't fall too fast",
-                    itemAmount=200f,
-                    itemType=ItemType.HealthBackupKey
-                },
-            }
+
         };
-        
+        GameResourceManager.Instance.GetPlayerData((playerData) =>
+        {
+            player.PlayerData = playerData;
+        });
+
     }
 
     public void LoadCampaignData()
