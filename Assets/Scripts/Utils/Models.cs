@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using CandFarmEnums;
 
 namespace Models
@@ -27,7 +28,6 @@ namespace Models
     {
         public int Level;
         public GameType gameType;
-        
+        public Dictionary<CandyType, int> battleCandies;
     }
-
 }
