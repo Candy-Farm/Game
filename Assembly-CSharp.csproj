@@ -102,7 +102,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\Utils\Singleton.cs" />
      <Compile Include="Assets\Scripts\Managers\GameSceneManager.cs" />
-     <Compile Include="Assets\Scripts\Data\GameData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

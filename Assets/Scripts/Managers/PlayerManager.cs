@@ -5,14 +5,17 @@ using CandFarmEnums;
 using Models;
 using UnityEngine;
 
-public class PlayerManager
+public class PlayerManager : Singleton<PlayerManager>
 {
     public PlayerDataSO PlayerData;
+
+    public int stageIndex;
 
     public Item[] playerItems;
 
     public PlayerManager()
     {
+        stageIndex = 1;
         playerItems = new Item[]{
             new Item{
                 itemName=ItemType.Speed.ToString(),

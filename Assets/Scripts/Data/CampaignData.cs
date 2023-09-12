@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using CandFarmEnums;
-using GameData.CampaignDesign;
 using Models;
 using UnityEngine;
 

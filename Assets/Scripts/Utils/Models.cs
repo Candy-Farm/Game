@@ -30,5 +30,9 @@ namespace Models
         public GameType gameType;
         public Dictionary<CandyType, int> battleCandies;
         public float timeSpan;
+        public Reward reward;
+        public bool iscompleted = false;
+        public float expBonus;
+
     }
 }
