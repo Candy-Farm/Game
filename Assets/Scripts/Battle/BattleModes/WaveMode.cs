@@ -18,7 +18,7 @@ public class WaveMode : IBattleModeBase
         throw new System.NotImplementedException();
     }
 
-    public bool StartBattl()
+    public bool StartBattle()
     {
         throw new System.NotImplementedException();
     }

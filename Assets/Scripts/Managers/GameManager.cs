@@ -10,14 +10,14 @@ public class GameManager : Singleton<GameManager>
 {
     public ProfilePictureDataSO profilePicDataSO;
 
-    [SerializeField]
     public PlayerManager player;
-
+    CampaignData campaignData;
 
     MenuHandler mainMenu;
     void Awake()
     {
         LoadPlayerData();
+        LoadCampaignData();
         mainMenu = new MenuHandler();
     }
 
@@ -42,7 +42,7 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadCampaignData()
     {
-
+        campaignData = new CampaignData();
     }
 
     public Sprite GetProfilePicture(int Index)

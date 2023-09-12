@@ -40,7 +40,10 @@
      <Compile Include="Assets\Scripts\Audio\AudioSettings.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\Scripts\Battle\BattleManager.cs" />
+     <Compile Include="Assets\Scripts\Utils\TargetCandyMode.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+     <Compile Include="Assets\Scripts\Battle\BattleModes\FastPaceMode.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
@@ -58,6 +61,7 @@
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\Scripts\Battle\BattleModes\EscapeBombMode.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\TargetSO.cs" />
      <Compile Include="Assets\Scripts\Managers\CampaignDataManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -84,6 +88,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Scripts\Managers\MenuUiManager.cs" />
+     <Compile Include="Assets\Scripts\Battle\BattleModes\WaveMode.cs" />
      <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\Data\CampaignData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -99,10 +104,6 @@
      <Compile Include="Assets\Scripts\Managers\GameSceneManager.cs" />
      <Compile Include="Assets\Scripts\Data\GameData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Scripts\Battle\BattleModes\FastPaceMode.cs" />
-     <Compile Include="Assets\Scripts\Utils\TargetCandyMode.cs" />
-     <Compile Include="Assets\Scripts\Battle\BattleModes\WaveMode.cs" />
-     <Compile Include="Assets\Scripts\Battle\BattleModes\EscapeBombMode.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

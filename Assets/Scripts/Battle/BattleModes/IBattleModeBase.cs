@@ -7,7 +7,7 @@ using UnityEngine;
 public interface IBattleModeBase
 {
     public bool IntializeBattleData(CampaignStage stageData);
-    public bool StartBattl();
+    public bool StartBattle();
     public bool OnUpdate();
     public void OnGameOver();
 }
