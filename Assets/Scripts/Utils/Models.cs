@@ -29,14 +29,7 @@ namespace Models
         public int stageIndex;
         public GameType gameType;
         public Dictionary<CandyType, int> battleCandies;
-        public KeyValuePair<CandyType, int> targetCandy;
-
-        public int CheckWaveMode()
-        {
-            if (gameType == GameType.WaveMode)
-                return 3;
-            return 0;
-        }
-
+        // public KeyValuePair<CandyType, int> targetCandy;
+        public float timeSpan;
     }
 }

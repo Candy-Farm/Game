@@ -36,14 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\UTess.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\ArraySlice.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\Array.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\AssemblyInfo.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\Refinery.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\PlanarGraph.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\Smoothen.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\Tessellator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\UTess.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\ArraySlice.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\UTess2D\PlanarGraph.cs" />
      <None Include="Library\PackageCache\com.unity.2d.common@6.0.6\Runtime\Unity.2D.Common.Runtime.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -344,6 +344,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
         <HintPath>C:\Users\nkwua\Documents\Projects\Unity Projects\Candy Farm\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>C:\Users\nkwua\Documents\Projects\Unity Projects\Candy Farm\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

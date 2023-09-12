@@ -17,7 +17,6 @@ public class GameManager : Singleton<GameManager>
     MenuHandler mainMenu;
     void Awake()
     {
-        GetSOItem();
         LoadPlayerData();
         mainMenu = new MenuHandler();
     }
@@ -26,12 +25,6 @@ public class GameManager : Singleton<GameManager>
     {
 
     }
-
-    public void GetSOItem()
-    {
-
-    }
-
 
     public void LoadPlayerData()
     {

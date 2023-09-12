@@ -40,23 +40,23 @@
      <Compile Include="Assets\com.unity.uiextensions\Editor\uGUITools.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\AccordionElementEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\CUIBezierCurveEditor.cs" />
+     <Compile Include="Assets\com.unity.uiextensions\Editor\ColorPickerPresetsEditor.cs" />
+     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicIconListCopier.cs" />
+     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicIconEditor.cs" />
+     <Compile Include="Assets\com.unity.uiextensions\Editor\BoxSliderEditor.cs" />
+     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicRenameEditor.cs" />
+     <Compile Include="Assets\com.unity.uiextensions\Editor\CUIImageEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\FancyScrollView\ScrollerEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\CUITextEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\UIExtensionsMenuOptions.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\ColorPickerPresetsEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicIconListCopier.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\CanvasGroupActivator.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\MinMaxSliderEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\ScrollPositionControllerEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\CUIGraphicEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicIconEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\BezierLineRendererEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\BoxSliderEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\NonDrawingGraphicEditor.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicRenameEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\TextPicEditor.cs" />
      <Compile Include="Assets\com.unity.uiextensions\Editor\ReadOnlyDrawer.cs" />
-     <Compile Include="Assets\com.unity.uiextensions\Editor\CUIImageEditor.cs" />
      <None Include="Assets\com.unity.uiextensions\Editor\UnityUIExtensions.Editor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -369,6 +369,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
         <HintPath>C:\Users\nkwua\Documents\Projects\Unity Projects\Candy Farm\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>C:\Users\nkwua\Documents\Projects\Unity Projects\Candy Farm\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
         <HintPath>C:\Users\nkwua\Documents\Projects\Unity Projects\Candy Farm\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -778,13 +781,13 @@
       <Project>{f470e242-a416-bfae-b28c-c5e668db330d}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{f11d9b0f-eaec-8a4d-da72-4370613f7828}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{7a55264c-ddd7-c16c-44d3-0eabccebd347}</Project>
       <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{f11d9b0f-eaec-8a4d-da72-4370613f7828}</Project>
+      <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

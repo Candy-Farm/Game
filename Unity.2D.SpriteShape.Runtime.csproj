@@ -37,21 +37,21 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\SpriteShapeGenerator.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\SplineUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\PriorityQueue.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\Mesh.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\AssemblyInfo.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\SpriteShapeGeometryCache.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\Geom.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\MeshUtils.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\Tess.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\Dict.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\BezierUtility.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\Spline.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\PriorityHeap.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\SpriteShapeController.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\SpriteShape.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\Sweep.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\SplineUtility.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\MeshUtils.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\BezierUtility.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\Spline.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\SpriteShape.cs" />
      <None Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\External\LibTessDotNet\LICENSE.txt" />
      <None Include="Library\PackageCache\com.unity.2d.spriteshape@7.0.7\Runtime\Unity.2D.SpriteShape.Runtime.asmdef" />
     <Reference Include="UnityEngine">
@@ -353,6 +353,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
         <HintPath>C:\Users\nkwua\Documents\Projects\Unity Projects\Candy Farm\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>C:\Users\nkwua\Documents\Projects\Unity Projects\Candy Farm\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

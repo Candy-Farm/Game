@@ -32,4 +32,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Userprofile.unity
     guid: ac52040d843627a468818e3fdbdc02dc
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 08f03fa38a0e89e4cafde85dd1754d41, type: 2}
