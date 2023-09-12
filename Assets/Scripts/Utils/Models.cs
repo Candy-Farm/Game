@@ -29,7 +29,6 @@ namespace Models
         public int stageIndex;
         public GameType gameType;
         public Dictionary<CandyType, int> battleCandies;
-        // public KeyValuePair<CandyType, int> targetCandy;
         public float timeSpan;
     }
 }

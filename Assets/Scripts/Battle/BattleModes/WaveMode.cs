@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using CandFarmEnums;
-using Models;
-using UnityEngine;
 
-public class FastPaceMode : IBattleModeBase
+using Models;
+
+public class WaveMode : IBattleModeBase
 {
     public bool IntializeBattleData(CampaignStage stageData)
     {
