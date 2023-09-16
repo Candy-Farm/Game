@@ -5,7 +5,7 @@ using CandFarmEnums;
 using Models;
 using UnityEngine;
 
-public class PlayerManager : Singleton<PlayerManager>
+public class PlayerManager 
 {
     public PlayerDataSO PlayerData;
 

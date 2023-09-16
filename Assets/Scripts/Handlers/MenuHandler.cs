@@ -1,14 +1,23 @@
+using Models;
 using UnityEngine;
 
 public class MenuHandler
 {
     public static MenuHandler Instance;
 
+    public CampaignStage[] GetCampaignStages()
+    {
+        return CampaignDataManager.Instance.GetAllStages();
+    }
 
+    public CampaignStage GetCurrentStage()
+    {
+        CampaignStage currentStage = CampaignDataManager.Instance.GetStage(GameManager.Instance.player.stageIndex);
+        return currentStage;
+    }
     public MenuHandler()
     {
-        if (Instance == null)
-            Instance = this;
+        Instance = this;
     }
 
     public PlayerManager GetPlayer()

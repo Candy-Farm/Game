@@ -18,9 +18,17 @@ public class MenuUiManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI playerLevelText;
 
+    [SerializeField]
+    GameObject spotLight;
+
+    [SerializeField]
+    GameObject campaignStagesUi;
+
+    public MenuHandler menuHandler;
 
     void Start()
     {
+        menuHandler = MenuHandler.Instance;
         Invoke(nameof(init), (AudioManager.Instance == null) ? 5 : 0);
         UpdateUserProfileUi();
 
@@ -66,10 +74,18 @@ public class MenuUiManager : MonoBehaviour
     private void UpdateUserProfileUi()
     {
         PlayerManager player = MenuHandler.Instance.GetPlayer();
-        // var playerData = player.PlayerData;
-        // PlayerProfilePic.sprite = GameManager.Instance.GetProfilePicture(playerData.pictureIndex);
-        // playerNameText.text = playerData.playerName;
-        // playerLevelText.text = "Lvl " + playerData.playerLevel.ToString();
+        var playerData = player.PlayerData;
+        PlayerProfilePic.sprite = GameManager.Instance.GetProfilePicture(playerData.pictureIndex);
+        playerNameText.text = playerData.playerName;
+        playerLevelText.text = "Lvl " + playerData.playerLevel.ToString();
 
+    }
+
+    public void updateCurrentStageUi()
+    {
+        for (int i = 0; i < menuHandler.GetCampaignStages().Length; i++)
+        {
+            var element = menuHandler.GetCampaignStages()[i];
+        }
     }
 }

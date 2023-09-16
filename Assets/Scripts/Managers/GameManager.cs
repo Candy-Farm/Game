@@ -16,15 +16,14 @@ public class GameManager : Singleton<GameManager>
     MenuHandler mainMenu;
     void Awake()
     {
-        player = PlayerManager.Instance;
+        player =new PlayerManager();
         LoadPlayerData();
-        // LoadCampaignData();
         mainMenu = new MenuHandler();
     }
 
     void Start()
     {
-        print(CampaignDataManager.Instance.GetStage(1));
+        print(CampaignDataManager.Instance.GetStage(1).stageIndex);
     }
 
     public void LoadPlayerData()
@@ -36,11 +35,6 @@ public class GameManager : Singleton<GameManager>
         });
 
     }
-
-    // public void LoadCampaignData()
-    // {
-    //     campaignData = new CampaignData();
-    // }
 
     public Sprite GetProfilePicture(int Index)
     {

@@ -41,8 +41,9 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Scripts\Battle\BattleManager.cs" />
-     <Compile Include="Assets\Scripts\Utils\TargetCandyMode.cs" />
+     <Compile Include="Assets\Scripts\Battle\BattleModes\TargetCandyMode.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+     <Compile Include="Assets\Scripts\Ui\MainMenu\StageUiItem.cs" />
      <Compile Include="Assets\Scripts\Battle\BattleModes\FastPaceMode.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
