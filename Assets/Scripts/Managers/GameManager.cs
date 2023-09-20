@@ -16,8 +16,11 @@ public class GameManager : Singleton<GameManager>
     MenuHandler mainMenu;
     void Awake()
     {
-        player =new PlayerManager();
-        LoadPlayerData();
+        player = new PlayerManager(() =>
+        {
+            LoadPlayerData();
+        });
+        
         mainMenu = new MenuHandler();
     }
 

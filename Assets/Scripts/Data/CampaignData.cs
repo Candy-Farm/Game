@@ -14,6 +14,7 @@ public class CampaignData
             new CampaignStage(){
                 stageIndex=1,
                 gameType=GameType.TargetCandyMode,
+                iscompleted =true,
                 battleCandies=new Dictionary<CandyType, int>(){
                     //total candies=50
                     {CandyType.Bomb,10},
@@ -26,6 +27,7 @@ public class CampaignData
             new CampaignStage(){
                 stageIndex=2,
                 gameType=GameType.EscapeBombMode,
+                iscurrentStage=true,
                 battleCandies=new Dictionary<CandyType, int>(){
                     //total candies100
                     {CandyType.Bomb,20},

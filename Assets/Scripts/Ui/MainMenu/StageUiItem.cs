@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Models;
+using TMPro;
 using UnityEngine;
 
 public class StageUiItem : MonoBehaviour
@@ -9,7 +10,9 @@ public class StageUiItem : MonoBehaviour
     Color stageColor;
 
     [SerializeField]
-    GameObject padlockUi;
+    GameObject lockUi;
+    [SerializeField]
+    TextMeshProUGUI textUi;
     void Start()
     {
 
@@ -17,6 +20,6 @@ public class StageUiItem : MonoBehaviour
 
     public void updateStageItem(CampaignStage data)
     {
-        
+        // if(stage)
     }
 }

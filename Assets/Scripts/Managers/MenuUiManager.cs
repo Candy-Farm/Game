@@ -17,13 +17,6 @@ public class MenuUiManager : MonoBehaviour
     TextMeshProUGUI playerNameText;
     [SerializeField]
     TextMeshProUGUI playerLevelText;
-
-    [SerializeField]
-    GameObject spotLight;
-
-    [SerializeField]
-    GameObject campaignStagesUi;
-
     public MenuHandler menuHandler;
 
     void Start()
@@ -31,6 +24,7 @@ public class MenuUiManager : MonoBehaviour
         menuHandler = MenuHandler.Instance;
         Invoke(nameof(init), (AudioManager.Instance == null) ? 5 : 0);
         UpdateUserProfileUi();
+        Invoke(nameof(UpdateUserProfileUi), 2);
 
     }
 
@@ -44,17 +38,6 @@ public class MenuUiManager : MonoBehaviour
         AudioManager.Instance.PlaySound(AudioGroup.Sfx, AudioClipNames.Sfx.ButtoClick.ToString());
         SceneManager.LoadScene("Game");
     }
-
-    public void EnterInventory()
-    {
-        SceneManager.LoadScene(SceneNames.Inventory.ToString());
-    }
-
-    public void EnterLeaderboard()
-    {
-        SceneManager.LoadScene(SceneNames.Leaderboard.ToString());
-    }
-
     public void EnterProfile()
     {
         SceneManager.LoadScene(SceneNames.Userprofile.ToString());
@@ -64,28 +47,13 @@ public class MenuUiManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneNames.Tutorial.ToString());
     }
-
-    public void EnterShop()
-    {
-        SceneManager.LoadScene(SceneNames.Store.ToString());
-    }
-
-
     private void UpdateUserProfileUi()
     {
         PlayerManager player = MenuHandler.Instance.GetPlayer();
         var playerData = player.PlayerData;
-        PlayerProfilePic.sprite = GameManager.Instance.GetProfilePicture(playerData.pictureIndex);
-        playerNameText.text = playerData.playerName;
-        playerLevelText.text = "Lvl " + playerData.playerLevel.ToString();
+        print(PlayerProfilePic);
+        // playerNameText.text = playerData.playerName;
+        // playerLevelText.text = "Lvl " + playerData.playerLevel.ToString();
 
-    }
-
-    public void updateCurrentStageUi()
-    {
-        for (int i = 0; i < menuHandler.GetCampaignStages().Length; i++)
-        {
-            var element = menuHandler.GetCampaignStages()[i];
-        }
     }
 }

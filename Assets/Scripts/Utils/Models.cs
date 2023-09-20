@@ -32,6 +32,7 @@ namespace Models
         public float timeSpan;
         public Reward reward;
         public bool iscompleted = false;
+        public bool iscurrentStage = false;
         public float expBonus;
 
     }

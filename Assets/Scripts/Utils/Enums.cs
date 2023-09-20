@@ -35,17 +35,11 @@ namespace CandFarmEnums
 
     public enum SceneNames
     {
-        Leaderboard,
         Menu,
         Settings,
         Game,
-        Store,
         Userprofile,
-        Inventory,
-        DailyQuest,
-        History,
         Notification,
-        RewardUnveil,
         Tutorial
     }
 }
