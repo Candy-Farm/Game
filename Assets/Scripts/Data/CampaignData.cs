@@ -27,8 +27,9 @@ public class CampaignData
             new CampaignStage(){
                 stageIndex=2,
                 gameType=GameType.EscapeBombMode,
-                iscurrentStage=true,
-                battleCandies=new Dictionary<CandyType, int>(){
+                iscompleted =false,
+                iscurrentStage = true,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies100
                     {CandyType.Bomb,20},
                     {CandyType.firstCandy,20},
@@ -37,10 +38,11 @@ public class CampaignData
                     {CandyType.forthCandy,20},
                 }
             },
-            new CampaignStage(){
-                stageIndex=3,
-                gameType=GameType.WaveMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 3,
+                gameType = GameType.WaveMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies100
                     {CandyType.Bomb,10},
                     {CandyType.firstCandy,20},
@@ -50,10 +52,11 @@ public class CampaignData
 
                 }
             },
-            new CampaignStage(){
-                stageIndex=4,
-                gameType=GameType.FastPaceMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 4,
+                gameType = GameType.FastPaceMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies200
                     {CandyType.firstCandy,50},
                     {CandyType.secondCandy,50},
@@ -61,10 +64,11 @@ public class CampaignData
                     {CandyType.forthCandy,50},
                 }
             },
-            new CampaignStage(){
-                stageIndex=5,
-                gameType=GameType.WaveMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 5,
+                gameType = GameType.WaveMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies150
                     {CandyType.Bomb,15},
                     {CandyType.secondCandy,35},
@@ -72,10 +76,11 @@ public class CampaignData
                     {CandyType.forthCandy,50},
                 }
             },
-            new CampaignStage(){
-                stageIndex=6,
-                gameType=GameType.TargetCandyMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 6,
+                gameType = GameType.TargetCandyMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies=100
                     {CandyType.Bomb,17},
                     {CandyType.firstCandy,35},
@@ -84,10 +89,11 @@ public class CampaignData
                 },
                 // targetCandy=new KeyValuePair<CandyType, int>(CandyType.forthCandy,10)
             },
-            new CampaignStage(){
-                stageIndex=7,
-                gameType=GameType.TargetCandyMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 7,
+                gameType = GameType.TargetCandyMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies=120
                     {CandyType.Bomb,20},
                     {CandyType.firstCandy,21},
@@ -96,10 +102,11 @@ public class CampaignData
                 },
                 // targetCandy=new KeyValuePair<CandyType, int>(CandyType.forthCandy,10)
             },
-            new CampaignStage(){
-                stageIndex=8,
-                gameType=GameType.WaveMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 8,
+                gameType = GameType.WaveMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies=120
                     {CandyType.Bomb,30},
                     {CandyType.firstCandy,20},
@@ -108,10 +115,11 @@ public class CampaignData
                     {CandyType.forthCandy,30}
                 },
             },
-            new CampaignStage(){
-                stageIndex=9,
-                gameType=GameType.EscapeBombMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 9,
+                gameType = GameType.EscapeBombMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies=150
                     {CandyType.Bomb,50},
                     {CandyType.firstCandy,50},
@@ -119,10 +127,11 @@ public class CampaignData
                     {CandyType.forthCandy,25},
                 },
             },
-            new CampaignStage(){
-                stageIndex=10,
-                gameType=GameType.FastPaceMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 10,
+                gameType = GameType.FastPaceMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies=90
                     {CandyType.Bomb,15},
                     {CandyType.firstCandy,30},
@@ -130,18 +139,20 @@ public class CampaignData
                     {CandyType.forthCandy,15},
                 },
             },
-            new CampaignStage(){
-                stageIndex=11,
-                gameType=GameType.EscapeBombMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 11,
+                gameType = GameType.EscapeBombMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies=70
                     {CandyType.Bomb,70},
                 },
             },
-            new CampaignStage(){
-                stageIndex=12,
-                gameType=GameType.FastPaceMode,
-                battleCandies=new Dictionary<CandyType, int>(){
+            new CampaignStage()
+    {
+        stageIndex = 12,
+                gameType = GameType.FastPaceMode,
+                battleCandies = new Dictionary<CandyType, int>(){
                     //total candies=90
                     {CandyType.Bomb,40},
                     {CandyType.firstCandy,40},

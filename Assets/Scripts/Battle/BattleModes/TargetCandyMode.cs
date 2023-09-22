@@ -1,7 +1,7 @@
 
 using Models;
 
-public class TargetCandyMode : IBattleModeBase
+public class TargetCandyMode : BattleModeBase
 {
     public bool IntializeBattleData(CampaignStage stageData)
     {

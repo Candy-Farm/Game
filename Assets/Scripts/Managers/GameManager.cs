@@ -24,11 +24,6 @@ public class GameManager : Singleton<GameManager>
         mainMenu = new MenuHandler();
     }
 
-    void Start()
-    {
-        print(CampaignDataManager.Instance.GetStage(1).stageIndex);
-    }
-
     public void LoadPlayerData()
     {
 

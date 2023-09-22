@@ -1,7 +1,7 @@
 
 using Models;
 
-public class WaveMode : IBattleModeBase
+public class WaveMode : BattleModeBase
 {
     public bool IntializeBattleData(CampaignStage stageData)
     {

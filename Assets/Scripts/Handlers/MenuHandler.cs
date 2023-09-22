@@ -12,7 +12,7 @@ public class MenuHandler
 
     public CampaignStage GetCurrentStage()
     {
-        CampaignStage currentStage = CampaignDataManager.Instance.GetStage(GameManager.Instance.player.stageIndex);
+        CampaignStage currentStage = CampaignDataManager.Instance.GetCurrentStage();
         return currentStage;
     }
     public MenuHandler()

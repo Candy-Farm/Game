@@ -20,7 +20,7 @@ public class CampaignUiManager : MonoBehaviour
         List<CampaignStage> campaignStages = CampaignDataManager.Instance.GetAllStages().ToList();
         for (int i = 0; i < campaignStages.Count; i++)
         {
-            campaignStagesUi.GetChild(i).GetComponent<Image>().color = Color.white;
+            campaignStagesUi.GetChild(i).GetComponent<StageUiItem>().updateStageItem(campaignStages[i]);
         }
     }
 
