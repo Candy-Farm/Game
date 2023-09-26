@@ -9,6 +9,9 @@ public class CandyItem : MonoBehaviour
 
     private IObjectPool<CandyItem> candyItemPool;
 
+    [HideInInspector]
+    public bool candyCaught = false;
+
     public void SetPool(IObjectPool<CandyItem> pool)
     {
         candyItemPool = pool;
@@ -20,9 +23,5 @@ public class CandyItem : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = candy.sprite;
     }
 
-    private void OnBecameInvisible()
-    {
-        if (this.gameObject.activeSelf == false)
-            candyItemPool.Release(this);
-    }
+
 }

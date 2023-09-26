@@ -7,21 +7,26 @@ using UnityEngine;
 public class BattleModeBase : MonoBehaviour
 {
     internal CandySpawnController spawner;
+    public BattleManager battleManager;
     public CampaignStage currentStage;
 
     private void Awake()
     {
         spawner = FindObjectOfType<CandySpawnController>();
-        currentStage = FindObjectOfType<BattleManager>().stageData;
     }
     private void Start()
     {
-        if (currentStage != null)
+        battleManager = FindFirstObjectByType<BattleManager>();
+        if (battleManager.battleMode != null)
+        {
+            currentStage = battleManager.battleMode.currentStage;
             LoadStageData(currentStage);
+        }
     }
 
     public virtual void LoadStageData(CampaignStage stageData)
     {
-
+        currentStage = stageData;
+        spawner.updateGameData(stageData);
     }
 }

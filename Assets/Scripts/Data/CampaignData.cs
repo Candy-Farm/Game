@@ -22,6 +22,7 @@ public class CampaignData
                     {CandyType.secondCandy,15},
                     {CandyType.thirdCandy,10},
                 },
+                timeSpan=3
                 // targetCandy=new KeyValuePair<CandyType, int>(CandyType.firstCandy,5)
             },
             new CampaignStage(){
@@ -36,7 +37,8 @@ public class CampaignData
                     {CandyType.secondCandy,20},
                     {CandyType.thirdCandy,20},
                     {CandyType.forthCandy,20},
-                }
+                },
+                timeSpan=2
             },
             new CampaignStage()
     {
@@ -49,8 +51,9 @@ public class CampaignData
                     {CandyType.secondCandy,20},
                     {CandyType.thirdCandy,25},
                     {CandyType.forthCandy,25},
+                },
+                timeSpan=2.5f
 
-                }
             },
             new CampaignStage()
     {
@@ -62,7 +65,8 @@ public class CampaignData
                     {CandyType.secondCandy,50},
                     {CandyType.thirdCandy,50},
                     {CandyType.forthCandy,50},
-                }
+                },
+                timeSpan=2.5f
             },
             new CampaignStage()
     {
@@ -74,7 +78,8 @@ public class CampaignData
                     {CandyType.secondCandy,35},
                     {CandyType.thirdCandy,50},
                     {CandyType.forthCandy,50},
-                }
+                },
+                timeSpan=2f
             },
             new CampaignStage()
     {
@@ -87,6 +92,7 @@ public class CampaignData
                     {CandyType.secondCandy,35},
                     {CandyType.forthCandy,13},
                 },
+                timeSpan=1.5f
                 // targetCandy=new KeyValuePair<CandyType, int>(CandyType.forthCandy,10)
             },
             new CampaignStage()
@@ -100,6 +106,7 @@ public class CampaignData
                     {CandyType.secondCandy,40},
                     {CandyType.thirdCandy,39},
                 },
+                timeSpan=2.5f
                 // targetCandy=new KeyValuePair<CandyType, int>(CandyType.forthCandy,10)
             },
             new CampaignStage()
@@ -114,6 +121,7 @@ public class CampaignData
                     {CandyType.thirdCandy,20},
                     {CandyType.forthCandy,30}
                 },
+                timeSpan=2
             },
             new CampaignStage()
     {
@@ -126,7 +134,8 @@ public class CampaignData
                     {CandyType.thirdCandy,25},
                     {CandyType.forthCandy,25},
                 },
-            },
+                timeSpan=1.7f
+    },
             new CampaignStage()
     {
         stageIndex = 10,
@@ -138,6 +147,7 @@ public class CampaignData
                     {CandyType.thirdCandy,30},
                     {CandyType.forthCandy,15},
                 },
+                timeSpan=1f
             },
             new CampaignStage()
     {
@@ -147,6 +157,7 @@ public class CampaignData
                     //total candies=70
                     {CandyType.Bomb,70},
                 },
+                timeSpan=1f
             },
             new CampaignStage()
     {
@@ -160,6 +171,7 @@ public class CampaignData
                     {CandyType.thirdCandy,40},
                     {CandyType.forthCandy,40},
                 },
+                timeSpan=2f
             },
         };
     }

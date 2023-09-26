@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using CandFarmEnums;
+using Models;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -15,22 +16,19 @@ public class CandySpawnController : MonoBehaviour
 
     [SerializeField]
     CandySO[] candySOs;
-
-    BattleModeBase battleMode;
+    CampaignStage StageData;
     public IObjectPool<CandyItem> candyItemPool;
     private void Awake()
     {
-        candyItemPool = new ObjectPool<CandyItem>(CreateCandy, OnGet, OnRelease, OnDestroyCandy, maxSize: 5);
+        candyItemPool = new ObjectPool<CandyItem>(CreateCandy, OnGet, OnRelease, OnDestroyCandy, maxSize: 10);
 
-    }
-    private void Start()
-    {
-        battleMode = FindFirstObjectByType<BattleManager>().battleMode;
+        
     }
 
     private CandyItem CreateCandy()
     {
-
+        var gameCandies = StageData.battleCandies;
+        if (gameCandies.Count <= 0) return null;
         CandyItem newCandy = Instantiate(candyPrefab).GetComponent<CandyItem>();
         newCandy.SetPool(candyItemPool);
         return newCandy;
@@ -38,12 +36,11 @@ public class CandySpawnController : MonoBehaviour
 
     private void OnGet(CandyItem candyItem)
     {
+        var gameCandies = StageData.battleCandies;
         candyItem.gameObject.SetActive(true);
-        float randPosX = Random.Range(-GetHorizontalBounds() / 1.5f, GetHorizontalBounds() / 1.5f);
+        float randPosX = Random.Range(-GetHorizontalBounds() * 0.5f, GetHorizontalBounds() * 0.5f);
         Vector3 pos = new Vector3(randPosX, transform.position.y);
         candyItem.transform.position = pos;
-        var gameCandies = battleMode.currentStage.battleCandies;
-        if (gameCandies.Count <= 0) return;
         int randCandyIndex = Random.Range(0, gameCandies.Count);
         var candyElement = gameCandies.ElementAt(randCandyIndex);
         CandySO so = candySOs.FirstOrDefault((x) => x.candyType == candyElement.Key);
@@ -57,6 +54,11 @@ public class CandySpawnController : MonoBehaviour
             candyType = so.candyType,
             sprite = so.candyImage
         });
+        if (gameCandies.Count <= 0)
+        {
+            CancelInvoke();
+        }
+
     }
 
     private void OnRelease(CandyItem candyItem)
@@ -68,21 +70,20 @@ public class CandySpawnController : MonoBehaviour
     {
         Destroy(candyItem.gameObject);
     }
-    private void Init()
-    {
-
-    }
     public float GetHorizontalBounds()
     {
         float hSize = gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
         return hSize;
     }
-    private void Update()
+
+    internal void updateGameData(CampaignStage stageData)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            print(candyItemPool.CountInactive);
-            candyItemPool.Get();
-        }
+        this.StageData = stageData;
     }
+
+    private void SpawnCandy()
+    {
+        candyItemPool.Get();
+    }
+
 }

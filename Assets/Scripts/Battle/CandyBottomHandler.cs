@@ -4,6 +4,7 @@ public class CandyBottomHandler : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        // Destroy(collider.gameObject);
+        if (collider.gameObject.activeSelf == false)
+            FindFirstObjectByType<CandySpawnController>().candyItemPool.Release(collider.GetComponent<CandyItem>());
     }
 }

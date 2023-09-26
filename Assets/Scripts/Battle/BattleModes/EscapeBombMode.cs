@@ -1,6 +1,7 @@
 using UnityEngine;
 using Models;
 using Unity.VisualScripting;
+using CandFarmEnums;
 
 public class EscapeBombMode : BattleModeBase
 {
@@ -9,27 +10,32 @@ public class EscapeBombMode : BattleModeBase
 
     }
 
-    // private void Start()
-    // {
-    // }
-    public override void LoadStageData(CampaignStage stageData)
-    {
-    }
-
     public void OnGameOver()
     {
         throw new System.NotImplementedException();
     }
 
-    public void OnUpdateCandySpawn()
+    public void UpdateGamePlay(CandyItem candyItem)
     {
-        spawner.candyItemPool.Get();
+        if (candyItem.candyCaught == true)
+        {
+            if (candyItem.candyType == CandyType.Bomb)
+            {
+                battleManager.GetInGamePlayer().LooseHealth();
+            }
+        }
+        else
+        {
+            if (candyItem.candyType != CandyType.Bomb)
+            {
+                //loose life
+            }
+        }
     }
 
-    public bool StartBattle()
+    void processCandySpawning()
     {
-        throw new System.NotImplementedException();
+        // interval = (StageData.timeSpan * 60 / StageData.battleCandies.Sum(x => x.Value));
+        // InvokeRepeating(nameof(SpawnCandy), 1, interval);
     }
-
-
 }
