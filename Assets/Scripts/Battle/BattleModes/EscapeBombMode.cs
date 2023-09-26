@@ -4,27 +4,32 @@ using Unity.VisualScripting;
 
 public class EscapeBombMode : BattleModeBase
 {
-    public bool IntializeBattleData(CampaignStage stageData)
+    public void IntializeBattleData(CampaignStage stageData)
     {
-        return true;
+
     }
 
-    private void Start()
+    // private void Start()
+    // {
+    // }
+    public override void LoadStageData(CampaignStage stageData)
     {
-        
     }
+
     public void OnGameOver()
     {
         throw new System.NotImplementedException();
     }
 
-    public bool OnUpdate()
+    public void OnUpdateCandySpawn()
     {
-        throw new System.NotImplementedException();
+        spawner.candyItemPool.Get();
     }
 
     public bool StartBattle()
     {
         throw new System.NotImplementedException();
     }
+
+
 }

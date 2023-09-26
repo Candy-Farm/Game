@@ -31,7 +31,9 @@ public class BasketHandler : MonoBehaviour
         float objWidth = gameObject.GetComponent<SpriteRenderer>().bounds.size.x / 2;
         return new Vector3(-width + objWidth, width - objWidth, 0);
     }
-    private void OnTriggerEnter2D(Collider2D collider) {
-        Destroy(collider.gameObject);
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        FindFirstObjectByType<CandySpawnController>().candyItemPool.Release(collider.GetComponent<CandyItem>());
+        // Destroy(collider.gameObject);
     }
 }

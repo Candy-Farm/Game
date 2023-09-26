@@ -1,16 +1,22 @@
+using Models;
 using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
-    // public Battle battleMode;
+    [HideInInspector]
+    public BattleModeBase battleMode;
 
+    public CampaignStage stageData;
     private void Awake()
     {
-        // BattleModeBase modeBase = FindAnyObjectByType<EscapeBombMode>();
-        // if (modeBase == null)
-        // {
-        //     battleMode = Instantiate(new GameObject("BattleMode"), transform).AddComponent<EscapeBombMode>();
-        // }
-
+        stageData = CampaignDataManager.Instance.GetCurrentStage();
+        if (battleMode == null)
+        {
+            battleMode = new GameObject("GameMode").AddComponent<EscapeBombMode>();
+            battleMode.transform.parent = this.transform;
+            // Instantiate(battleMode, transform);
+            // battleMode = obj.AddComponent<EscapeBombMode>();
+            // Instantiate(battleMode, transform);
+        }
     }
 }
